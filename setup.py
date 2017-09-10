@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 
 from setuptools import setup
@@ -21,6 +23,7 @@ setup(
     license='GPL License',
     description='Nim’s Django Helpers',
     long_description=README,
+    url='https://github.com/nim65s/ndh',
     author='Guilhem Saurel',
     author_email='webmaster@saurel.me',
     classifiers=[
