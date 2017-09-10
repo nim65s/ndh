@@ -10,4 +10,6 @@ nothing.
 - form template
 - sums on queryset
 - authentication & profile, registration, u2f
-
+- css / templatetages emails euro
+- libs & framework js / css & links
+- get_absolute_url dérivés
