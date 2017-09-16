@@ -1,0 +1,6 @@
+.euro, .nombre { font-family: 'Source Code Pro', monospace; }
+.euro:after { content: ' €'; }
+.at:after { content: '@'; }
+.dot:after { content: '.'; }
+.mail:after { content: '>'; }
+.mail:before { content: '<'; }
