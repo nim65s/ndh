@@ -1,4 +1,4 @@
-.euro, .nombre { font-family: 'Source Code Pro', monospace; }
+.euro, .nombre { font-family: 'Source Code Pro', monospace; text-align: right; }
 .euro:after { content: ' €'; }
 .at:after { content: '@'; }
 .dot:after { content: '.'; }
