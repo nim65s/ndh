@@ -12,4 +12,3 @@ def email(email, request):
         at, dot = ('<span class="%s"></span>' % i for i in ['at', 'dot'])
         content = email.replace('@', at).replace('.', dot)
     return mark_safe('<span class="mail">%s</span>' % content)
-

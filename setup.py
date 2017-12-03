@@ -7,7 +7,7 @@ from setuptools import setup
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
 
-with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as requirements:
+with open(os.path.join(os.path.dirname(__file__), 'requirements.in')) as requirements:
     REQUIREMENTS = [req.split('#egg=')[1] if '#egg=' in req else req for req in requirements.readlines()]
 
 

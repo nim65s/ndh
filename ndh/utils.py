@@ -7,7 +7,7 @@ def full_url(url=''):
 
 
 def enum_to_choices(enum):
-        return ((item.value, item.name) for item in list(enum))
+    return ((item.value, item.name) for item in list(enum))
 
 
 def query_sum(queryset, field):
