@@ -3,6 +3,8 @@ from datetime import timedelta
 from django.test import TestCase
 from django.utils import timezone
 
+from ndh.utils import query_sum
+
 from .models import TestModel
 
 
@@ -31,3 +33,10 @@ class TestNDH(TestCase):
         self.assertEqual(instance.get_absolute_url(), f'/test/{instance.slug}')
         self.assertEqual(str(instance.get_link()), f'<a href="/test/{instance.slug}">{instance}</a>')
         self.assertEqual(instance.get_full_url(), f'https://example.com/test/{instance.slug}')
+        self.assertEqual(instance.get_admin_url(), '/admin/testproject/testmodel/1/change/')
+
+        # test query_sum
+        self.assertEqual(query_sum(TestModel.objects.all(), 'tests'), 42)
+
+        # test enum_to_choices
+        self.assertEqual(instance.get_year_in_school_display(), 'freshman')

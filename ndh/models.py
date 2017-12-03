@@ -12,7 +12,7 @@ class Links(object):
         return full_url(self.get_absolute_url())
 
     def get_admin_url(self):
-        return reverse(f'admin:{self._meta.app_label}_{self._meta.model_name}_change', args=self.id)
+        return reverse(f'admin:{self._meta.app_label}_{self._meta.model_name}_change', args=[self.id])
 
     def get_link(self):
         return mark_safe(f'<a href="{self.get_absolute_url()}">{self}</a>')
