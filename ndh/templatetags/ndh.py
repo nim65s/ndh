@@ -6,7 +6,7 @@ register = template.Library()
 
 @register.filter
 def email(email, request):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         content = '<a href="mailto:%s">%s</a>' % (email, email)
     else:
         at, dot = ('<span class="%s"></span>' % i for i in ['at', 'dot'])
