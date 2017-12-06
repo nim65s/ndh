@@ -1,0 +1,9 @@
+{% load bootstrap3 %}
+<form method="post" action="" class="form-horizontal" role="form">
+  {% csrf_token %}
+  {% bootstrap_form form layout="horizontal" %}
+  {% buttons layout="horizontal" %}
+    <button class="btn btn-success" type="submit">Ok</button>
+    <button class="btn btn-danger" href="javascript:history.back()">Nope</button>
+  {% endbuttons %}
+</form>
