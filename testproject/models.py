@@ -11,6 +11,7 @@ class TestModel(Links, TimeStampedModel, NamedModel):
 
     year_in_school = models.IntegerField(choices=enum_to_choices(YEARS_IN_SCHOOL), default=1)
     tests = models.IntegerField(default=42)
+    moment = models.DateTimeField()
 
     def get_absolute_url(self):
         return f'/test/{self.slug}'
