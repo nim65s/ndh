@@ -1,0 +1,6 @@
+<form method="post" action="" class="form-horizontal" role="form">
+  {% csrf_token %}
+  <p>Êtes-vous bien sûr de vouloir supprimer {{ object }} ?</p>
+  <button class="btn btn-success" type="submit" >Je suis sûr</button> -
+  <button class="btn btn-danger" href="javascript:history.back()">Non, annuler</button>
+</form>
