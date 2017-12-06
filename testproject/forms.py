@@ -1,8 +1,8 @@
 from django.forms import ModelForm
 
-from .models import TestModel
-
 from ndh.forms import AccessibleDateTimeField
+
+from .models import TestModel
 
 
 class TestForm(ModelForm):

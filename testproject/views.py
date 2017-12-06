@@ -1,7 +1,7 @@
 from django.views.generic import CreateView, DeleteView
 
-from .models import TestModel
 from .forms import TestForm
+from .models import TestModel
 
 
 class TestCreateView(CreateView):
