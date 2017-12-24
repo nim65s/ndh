@@ -2,11 +2,12 @@ language: python
 python:
     - 3.6
 install:
-    - pip install -r requirements.txt flake8 python-coveralls
+    - pip install -r requirements.txt flake8 python-coveralls safety
 script:
     - ./manage.py migrate
     - coverage run manage.py test
     - flake8 .
+    - safety check
     - pip install 'git+https://github.com/nim65s/ndh.git#egg=ndh'
 after_success:
     - coveralls
