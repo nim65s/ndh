@@ -16,7 +16,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='ndh',
-    version='1.3.0',
+    version='2.0.0',
     packages=['ndh'],
     install_requires=REQUIREMENTS,
     include_package_data=True,

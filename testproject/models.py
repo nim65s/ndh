@@ -1,6 +1,7 @@
 from enum import IntEnum
 
 from django.db import models
+from django.urls import reverse
 
 from ndh.models import Links, NamedModel, TimeStampedModel
 from ndh.utils import enum_to_choices
@@ -14,4 +15,4 @@ class TestModel(Links, TimeStampedModel, NamedModel):
     moment = models.DateTimeField()
 
     def get_absolute_url(self):
-        return f'/test/{self.slug}'
+        return reverse('detail', args=[self.slug])

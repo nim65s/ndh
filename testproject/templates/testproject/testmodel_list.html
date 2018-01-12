@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>TestModels</h1>
+
+<table class="table">
+
+  <tr>
+    <th>Name</th>
+    <th>Slug</th>
+    <th>Created</th>
+    <th>Updated</th>
+    <th>Year in School</th>
+    <th>Tests</th>
+    <th>Moment</th>
+  </tr>
+
+  {% for object in object_list %}
+  {% include 'testproject/testmodel.html' with object=object %}
+  {% endfor %}
+</table>
+{% endblock %}

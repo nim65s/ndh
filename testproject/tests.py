@@ -57,6 +57,17 @@ class TestNDH(TestCase):
         mail = '<span class="mail"><a href="mailto:test@example.org">test@example.org</a></span>'
         self.assertIn(mail, r.content.decode())
 
+        User.objects.create_user(username='super', password='super', is_superuser=True)
+        self.client.login(username='super', password='super')
+
+        TestModel.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
+
+        r = self.client.get(reverse('list'))
+        self.assertIn('/admin/testproject/testmodel/', r.content.decode())
+
+        r = self.client.get(TestModel.objects.first().get_absolute_url())
+        self.assertIn('/admin/testproject/testmodel/1/change', r.content.decode())
+
     def test_views(self):
         self.assertEqual(TestModel.objects.count(), 0)
         r = self.client.get(reverse('create'))
@@ -66,12 +77,18 @@ class TestNDH(TestCase):
 
         self.assertEqual(TestModel.objects.count(), 1)
 
-        r = self.client.get(reverse('delete', args=[TestModel.objects.first().pk]))
+        r = self.client.get(reverse('delete', args=[TestModel.objects.first().slug]))
+        self.assertEqual(r.status_code, 302)
+
+        User.objects.create_user(username='super', password='super', is_superuser=True)
+        self.client.login(username='super', password='super')
+
+        r = self.client.get(reverse('delete', args=[TestModel.objects.first().slug]))
         self.assertEqual(r.status_code, 200)
 
         self.assertEqual(TestModel.objects.count(), 1)
 
-        r = self.client.post(reverse('delete', args=[TestModel.objects.first().pk]))
+        r = self.client.post(reverse('delete', args=[TestModel.objects.first().slug]))
         self.assertEqual(r.status_code, 302)
 
         self.assertEqual(TestModel.objects.count(), 0)
