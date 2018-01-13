@@ -13,6 +13,6 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='base.html', extra_context=CTX), name='test'),
     path('test/', ListView.as_view(model=TestModel), name='list'),
     path('test/create', views.TestCreateView.as_view(), name='create'),
-    path('test/<str:slug>', DetailView.as_view(model=TestModel), name='detail'),
-    path('test/<str:slug>/delete', views.TestDeleteView.as_view(), name='delete'),
+    path('test/<slug:slug>', DetailView.as_view(model=TestModel), name='detail'),
+    path('test/<slug:slug>/delete', views.TestDeleteView.as_view(), name='delete'),
 ]
