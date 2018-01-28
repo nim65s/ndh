@@ -60,7 +60,7 @@
     <hr>
     <script src="{% bootstrap_jquery_url %}"></script>
     <script src="{% bootstrap_javascript_url %}" crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" ></script>
-    <script>{% block scripts %}{% endblock %}</script>
+    {% block scripts %}{% endblock %}
   </body>
 </html>
 
