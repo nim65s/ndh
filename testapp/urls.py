@@ -3,7 +3,7 @@ from django.urls import include, path
 from django.views.generic import DetailView, ListView, TemplateView
 
 from . import views
-from .models import TestModel
+from .models import TestModel, TestModelList
 
 CTX = {'email': 'test@example.org'}
 
@@ -13,4 +13,5 @@ urlpatterns = [
     path('create', views.TestCreateView.as_view(), name='testmodel-add'),
     path('<slug:slug>', DetailView.as_view(model=TestModel), name='testmodel'),
     path('<slug:slug>/delete', views.TestDeleteView.as_view(), name='testmodel-del'),
+    path('list', ListView.as_view(model=TestModelList), name='testmodellists'),
 ]

@@ -7,7 +7,7 @@ from django.utils import timezone
 
 from ndh.utils import query_sum
 
-from .models import TestModel
+from .models import TestModel, TestModelList
 
 
 class TestNDH(TestCase):
@@ -92,3 +92,7 @@ class TestNDH(TestCase):
         self.assertEqual(r.status_code, 302)
 
         self.assertEqual(TestModel.objects.count(), 0)
+
+    def test_absolute_url_list(self):
+        instance = TestModelList.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
+        self.assertEqual(instance.get_absolute_url(), reverse('testapp:testmodellists'))

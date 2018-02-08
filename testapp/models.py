@@ -14,5 +14,6 @@ class TestModel(Links, TimeStampedModel, NamedModel):
     tests = models.IntegerField(default=42)
     moment = models.DateTimeField()
 
-    def get_absolute_url(self):
-        return reverse('testapp:testmodel', args=[self.slug])
+
+class TestModelList(TestModel):
+    absolute_url_detail = False

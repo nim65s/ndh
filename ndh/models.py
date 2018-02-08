@@ -8,6 +8,15 @@ from .utils import full_url
 
 
 class Links(object):
+    absolute_url_detail = True
+
+    def get_absolute_url(self):
+        app, model = self._meta.app_label, self._meta.model_name
+        if self.absolute_url_detail:
+            return reverse(f'{app}:{model}', kwargs={'slug': self.slug})
+        else:
+            return reverse(f'{app}:{model}s')
+
     def get_full_url(self):
         return full_url(self.get_absolute_url())
 
