@@ -15,4 +15,4 @@ class TestModel(Links, TimeStampedModel, NamedModel):
     moment = models.DateTimeField()
 
     def get_absolute_url(self):
-        return reverse('detail', args=[self.slug])
+        return reverse('testapp:testmodel', args=[self.slug])

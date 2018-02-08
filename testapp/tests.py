@@ -35,7 +35,7 @@ class TestNDH(TestCase):
         self.assertEqual(instance.get_absolute_url(), f'/test/{instance.slug}')
         self.assertEqual(str(instance.get_link()), f'<a href="/test/{instance.slug}">{instance}</a>')
         self.assertEqual(instance.get_full_url(), f'https://example.com/test/{instance.slug}')
-        self.assertEqual(instance.get_admin_url(), '/admin/testproject/testmodel/1/change/')
+        self.assertEqual(instance.get_admin_url(), '/admin/testapp/testmodel/1/change/')
 
         # test query_sum
         self.assertEqual(query_sum(TestModel.objects.all(), 'tests'), 42)
@@ -62,33 +62,33 @@ class TestNDH(TestCase):
 
         TestModel.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
 
-        r = self.client.get(reverse('list'))
-        self.assertIn('/admin/testproject/testmodel/', r.content.decode())
+        r = self.client.get(reverse('testapp:testmodels'))
+        self.assertIn('/admin/testapp/testmodel/', r.content.decode())
 
         r = self.client.get(TestModel.objects.first().get_absolute_url())
-        self.assertIn('/admin/testproject/testmodel/1/change', r.content.decode())
+        self.assertIn('/admin/testapp/testmodel/1/change', r.content.decode())
 
     def test_views(self):
         self.assertEqual(TestModel.objects.count(), 0)
-        r = self.client.get(reverse('create'))
+        r = self.client.get(reverse('testapp:testmodel-add'))
         self.assertEqual(r.status_code, 200)
         data = {'name': 'Pipè', 'year_in_school': 2, 'tests': 3, 'moment_0': '2017-12-06', 'moment_1': '03:19:45'}
-        r = self.client.post(reverse('create'), data)
+        r = self.client.post(reverse('testapp:testmodel-add'), data)
 
         self.assertEqual(TestModel.objects.count(), 1)
 
-        r = self.client.get(reverse('delete', args=[TestModel.objects.first().slug]))
+        r = self.client.get(reverse('testapp:testmodel-del', args=[TestModel.objects.first().slug]))
         self.assertEqual(r.status_code, 302)
 
         User.objects.create_user(username='super', password='super', is_superuser=True)
         self.client.login(username='super', password='super')
 
-        r = self.client.get(reverse('delete', args=[TestModel.objects.first().slug]))
+        r = self.client.get(reverse('testapp:testmodel-del', args=[TestModel.objects.first().slug]))
         self.assertEqual(r.status_code, 200)
 
         self.assertEqual(TestModel.objects.count(), 1)
 
-        r = self.client.post(reverse('delete', args=[TestModel.objects.first().slug]))
+        r = self.client.post(reverse('testapp:testmodel-del', args=[TestModel.objects.first().slug]))
         self.assertEqual(r.status_code, 302)
 
         self.assertEqual(TestModel.objects.count(), 0)
