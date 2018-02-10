@@ -1,6 +1,5 @@
-from django.contrib import admin
-from django.urls import include, path
-from django.views.generic import DetailView, ListView, TemplateView
+from django.urls import path
+from django.views.generic import DetailView, ListView
 
 from . import views
 from .models import TestModel, TestModelList

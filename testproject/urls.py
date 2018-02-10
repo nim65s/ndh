@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import TemplateView
 
 CTX = {'email': 'test@example.org'}
 

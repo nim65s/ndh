@@ -1,7 +1,6 @@
 from enum import IntEnum
 
 from django.db import models
-from django.urls import reverse
 
 from ndh.models import Links, NamedModel, TimeStampedModel
 from ndh.utils import enum_to_choices

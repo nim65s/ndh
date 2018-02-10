@@ -3,7 +3,6 @@
 from django.db import migrations, models
 
 import autoslug.fields
-
 import ndh.models
 
 
