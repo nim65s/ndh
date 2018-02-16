@@ -16,11 +16,11 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='ndh',
-    version='2.0.0',
+    version='3.0.0',
     packages=['ndh'],
     install_requires=REQUIREMENTS,
     include_package_data=True,
-    license='GPL License',
+    license='BSD',
     description='Nim’s Django Helpers',
     long_description=README,
     url='https://github.com/nim65s/ndh',
@@ -30,7 +30,7 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.6',
