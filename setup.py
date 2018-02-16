@@ -4,7 +4,10 @@ import os
 
 from setuptools import setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+readme_file = os.path.join(os.path.dirname(__file__), 'README.rst')
+if not os.path.isfile(readme_file):
+    readme_file = os.path.join(os.path.dirname(__file__), 'README.md')
+with open(readme_file) as readme:
     README = readme.read()
 
 with open(os.path.join(os.path.dirname(__file__), 'requirements.in')) as requirements:
