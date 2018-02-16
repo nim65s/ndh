@@ -6,6 +6,5 @@
 
 - Python 3.6
 - Django 2.0
-- [django-autoslug](https://github.com/nim65s/django-autoslug) (waiting for
-  https://github.com/neithere/django-autoslug/issues/31)
+- [django-autoslug](https://github.com/iplweb/django-autoslug-iplweb)
 - [django-bootstrap3](https://github.com/dyve/django-bootstrap3) (will be django-bootstrap4 soon)

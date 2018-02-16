@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-git+https://github.com/nim65s/django-autoslug#egg=django-autoslug
+django-autoslug-iplweb==1.9.4.dev0
 django-bootstrap3==9.1.0
-django==2.0.1
-pytz==2017.3              # via django
+django==2.0.2
+pytz==2018.3              # via django
