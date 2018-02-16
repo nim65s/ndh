@@ -4,7 +4,7 @@ import os
 
 from setuptools import setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
 with open(os.path.join(os.path.dirname(__file__), 'requirements.in')) as requirements:
@@ -16,7 +16,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='ndh',
-    version='3.0.2',
+    version='3.0.3',
     packages=['ndh'],
     install_requires=REQUIREMENTS,
     include_package_data=True,
@@ -26,6 +26,7 @@ setup(
     url='https://github.com/nim65s/ndh',
     author='Guilhem Saurel',
     author_email='webmaster@saurel.me',
+    python_requires='>=3.6',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
