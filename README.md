@@ -8,3 +8,7 @@
 - Django 2.0
 - [django-autoslug](https://github.com/iplweb/django-autoslug-iplweb)
 - [django-bootstrap4](https://github.com/zostera/django-bootstrap4)
+
+## Install
+
+`pip install ndh`
