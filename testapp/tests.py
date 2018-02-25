@@ -75,6 +75,7 @@ class TestNDH(TestCase):
         data = {'name': 'Pipè', 'year_in_school': 2, 'tests': 3, 'moment_0': '2017-12-06', 'moment_1': '03:19:45'}
         r = self.client.post(reverse('testapp:testmodel-add'), data)
 
+        self.assertIn(r.content.decode(), 'Create Test')
         self.assertEqual(TestModel.objects.count(), 1)
 
         r = self.client.get(reverse('testapp:testmodel-del', args=[TestModel.objects.first().slug]))

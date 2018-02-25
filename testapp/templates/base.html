@@ -3,7 +3,10 @@
 
 {% block pagetitle %}Test Page Title{% endblock %}
 {% block sitetitle %}Test Site Title{% endblock %}
-{% block navbarleft %}<li class="nav-item"><a class="nav-link" href="{% url 'testapp:testmodels' %}">List</a></li>{% endblock %}
+{% block navbarleft %}
+<li class="nav-item"><a class="nav-link" href="{% url 'testapp:testmodels' %}">List</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'testapp:testmodel-add' %}">Create</a></li>
+{% endblock %}
 
 {% block content %}
 {% show_email email %}
