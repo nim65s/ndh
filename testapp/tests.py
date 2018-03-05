@@ -1,11 +1,12 @@
 from datetime import timedelta
+import os
 
 from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
-from ndh.utils import query_sum
+from ndh.utils import query_sum, get_env
 
 from .models import TestModel, TestModelList
 
@@ -97,3 +98,24 @@ class TestNDH(TestCase):
     def test_absolute_url_list(self):
         instance = TestModelList.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
         self.assertEqual(instance.get_absolute_url(), reverse('testapp:testmodellists'))
+
+    def test_utils(self):
+        key, val, no_key, env_file = 'DJANGO_TEST_GET_ENV', 'it_works', 'KEY_WITHOUT_VAL', '.env'
+        get_env(env_file)
+        if key in os.environ:
+            val = os.environ[key]
+        else:
+            with open(env_file, 'a') as f:
+                print(f'{key}={val}', file=f)
+        with open(env_file, 'a') as f:
+            print(no_key, file=f)
+        get_env(env_file)
+        self.assertIn(key, os.environ)
+        self.assertEqual(os.environ[key], val)
+        self.assertNotIn(no_key, os.environ)
+
+        # Clean the file
+        with open(env_file) as f:
+            lines = f.readlines()
+        with open(env_file, 'w') as f:
+            f.write('\n'.join(line for line in lines if not line.startswith(key) and not line.startswith(no_key)))
