@@ -1,12 +1,12 @@
-from datetime import timedelta
 import os
+from datetime import timedelta
 
 from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
-from ndh.utils import query_sum, get_env
+from ndh.utils import get_env, query_sum
 
 from .models import TestModel, TestModelList
 
