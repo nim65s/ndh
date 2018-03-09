@@ -99,7 +99,7 @@ class TestNDH(TestCase):
         self.assertEqual(instance.get_absolute_url(), reverse('testapp:testmodellists'))
 
     def test_utils(self):
-        key, val, no_key, env_file = 'DJANGO_TEST_GET_ENV', 'it_works', 'KEY_WITHOUT_VAL', '.env'
+        key, val, no_key, env_file = 'DJANGO_TEST_GET_ENV', 'it=works', 'KEY_WITHOUT_VAL', '.env'
         get_env(env_file)
         if key in os.environ:
             val = os.environ[key]
