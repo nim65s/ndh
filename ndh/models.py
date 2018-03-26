@@ -13,7 +13,7 @@ class Links(object):
     def get_absolute_url(self):
         app, model = self._meta.app_label, self._meta.model_name
         if self.absolute_url_detail:
-            return reverse(f'{app}:{model}', kwargs={'slug': self.slug})
+            return reverse(f'{app}:{model}', kwargs={'slug': self.slug} if hasattr(self, 'slug') else {'pk': self.pk})
         else:
             return reverse(f'{app}:{model}s')
 

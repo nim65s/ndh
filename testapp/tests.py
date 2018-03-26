@@ -8,7 +8,7 @@ from django.utils import timezone
 
 from ndh.utils import get_env, query_sum
 
-from .models import TestModel, TestModelList
+from .models import TestModel, TestModelList, TestModelPK
 
 
 class TestNDH(TestCase):
@@ -98,6 +98,10 @@ class TestNDH(TestCase):
     def test_absolute_url_list(self):
         instance = TestModelList.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
         self.assertEqual(instance.get_absolute_url(), reverse('testapp:testmodellists'))
+
+    def test_absolute_url_pk(self):
+        instance = TestModelPK.objects.create()
+        self.assertEqual(instance.get_absolute_url(), f'/test/pk/{instance.pk}')
 
     def test_utils(self):
         key, val, no_key, env_file = 'DJANGO_TEST_GET_ENV', 'it=works', 'KEY_WITHOUT_VAL', '.env'

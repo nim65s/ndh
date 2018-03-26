@@ -16,3 +16,7 @@ class TestModel(Links, TimeStampedModel, NamedModel):
 
 class TestModelList(TestModel):
     absolute_url_detail = False
+
+
+class TestModelPK(Links, TimeStampedModel):
+    pass
