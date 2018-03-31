@@ -123,3 +123,8 @@ class TestNDH(TestCase):
             lines = f.readlines()
         with open(env_file, 'w') as f:
             f.write('\n'.join(line for line in lines if not line.startswith(key) and not line.startswith(no_key)))
+
+    def test_context_processors(self):
+        self.assertNotIn('UTC', self.client.get(reverse('testapp:settings')).content.decode())
+        with self.settings(NDH_TEMPLATES_SETTINGS=['TIME_ZONE']):
+            self.assertIn('UTC', self.client.get(reverse('testapp:settings')).content.decode())
