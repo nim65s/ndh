@@ -1,0 +1,46 @@
+Vous (ou quelqu’un prétendant être vous) avez demandé la création d’un compte
+sur {{ site.name }}. Si ce n’était pas vous, merci d’ignorer cet email, et
+votre adresse sera supprimée de notre base de données automatiquement.
+
+
+Pour activer ce compte, merci de cliquer sur le lien suivant dans les
+{{ expiration_days }} jours:
+
+http://{{site.domain}}{% url 'registration_activate' activation_key %}
+
+Cordialement,
+Les webmaster de {{ site.name }}
+
+{% comment %}
+**registration/activation_email.txt**
+
+Used to generate the text body of the activation email. Should display a
+link the user can click to activate the account. This template has the
+following context:
+
+``activation_key``
+    The activation key for the new account.
+
+``expiration_days``
+    The number of days remaining during which the account may be
+    activated.
+
+``site``
+    An object representing the site on which the user registered;
+    depending on whether ``django.contrib.sites`` is installed, this
+    may be an instance of either ``django.contrib.sites.models.Site``
+    (if the sites application is installed) or
+    ``django.contrib.sites.requests.RequestSite`` (if not). Consult `the
+    documentation for the Django sites framework
+    <http://docs.djangoproject.com/en/dev/ref/contrib/sites/>`_ for
+    details regarding these objects' interfaces.
+
+``user``
+    The new user account
+
+``request``
+    ``HttpRequest`` instance for better flexibility.
+    For example it can be used to compute absolute register URL:
+
+        {{ request.scheme }}://{{ request.get_host }}{% url 'registration_activate' activation_key %}
+{% endcomment %}
