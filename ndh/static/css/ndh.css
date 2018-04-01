@@ -4,3 +4,4 @@
 .dot:after { content: '.'; }
 .mail:after { content: '>'; }
 .mail:before { content: '<'; }
+dt { text-align: right; }
