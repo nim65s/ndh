@@ -5,6 +5,7 @@ from django.utils.safestring import mark_safe
 from autoslug import AutoSlugField
 
 from .utils import full_url
+from .querysets import NameOrderedQuerySet
 
 
 class Links(object):
@@ -38,6 +39,8 @@ class TimeStampedModel(models.Model):
 class NamedModel(models.Model):
     name = models.CharField(max_length=200, unique=True)
     slug = AutoSlugField(populate_from='name', unique=True)
+
+    objects = NameOrderedQuerySet.as_manager()
 
     class Meta:
         abstract = True

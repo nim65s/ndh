@@ -44,6 +44,12 @@ class TestNDH(TestCase):
         # test enum_to_choices
         self.assertEqual(instance.get_year_in_school_display(), 'freshman')
 
+        # test ordering
+        first = TestModel.objects.create(name='Abc', moment=timezone.now())
+        self.assertFalse(TestModel.objects.all().ordered)
+        self.assertTrue(TestModel.objects.name_ordered().ordered)
+        self.assertEqual(TestModel.objects.name_ordered().first(), first)
+
     def test_templatetags(self):
         r = self.client.get(reverse('test'))
         self.assertEqual(r.status_code, 200)
