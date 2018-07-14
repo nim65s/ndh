@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-django-autoslug-iplweb==1.9.4.dev0
+django-autoslug-iplweb==1.9.4
 django-bootstrap4==0.0.6
 django==2.0.7
 pytz==2018.5              # via django
