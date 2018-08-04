@@ -10,8 +10,8 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 
 with open(os.path.join(os.path.dirname(__file__), 'Pipfile')) as pipfile:
     content = pipfile.read()
-    REQUIREMENTS = re.findall(r'''\\n[ '"]*(\S*)[ '"]*=''', content.split('packages]')[1])
-    PYTHON_VERSION = re.search(r'python_version = "([\d.]+)"', content)[1]
+    REQUIREMENTS = re.findall('''\\n *['"]?([\w-]*)['"]? *=''', content.split('packages]')[1])
+    PYTHON_VERSION = re.search('''python_version *= *['"]*([\d.]+)['"]?''', content)[1]
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
