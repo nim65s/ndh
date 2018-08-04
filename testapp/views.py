@@ -1,6 +1,7 @@
+from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView
 
-from ndh.mixins import NDHFormMixin, SuperUserRequiredMixin
+from ndh.mixins import NDHDeleteMixin, NDHFormMixin, SuperUserRequiredMixin
 
 from .forms import TestForm
 from .models import TestModel
@@ -12,7 +13,7 @@ class TestCreateView(NDHFormMixin, CreateView):
     title = 'Create Test'
 
 
-class TestDeleteView(NDHFormMixin, SuperUserRequiredMixin, DeleteView):
+class TestDeleteView(NDHDeleteMixin, SuperUserRequiredMixin, DeleteView):
     model = TestModel
-    success_url = 'create'
+    success_url = reverse_lazy('testapp:testmodels')
     title = 'Delete Test'

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<h2>Confirmation avant suppression</h2>
+<form method="post" action="" class="form-horizontal" role="form">
+  {% csrf_token %}
+  <p class="text-center">Êtes-vous bien sûr de vouloir supprimer {{ object }} ?<br>
+  <button class="btn btn-warning" type="submit">Supprimer</button>
+  <button class="btn btn-info" href="javascript:history.back()">Annuler</button>
+</form>
+{% endblock %}

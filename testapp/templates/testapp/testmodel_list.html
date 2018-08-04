@@ -13,10 +13,11 @@
     <th>Year in School</th>
     <th>Tests</th>
     <th>Moment</th>
+     <th>Delete</th>
   </tr>
 
   {% for object in object_list %}
-  {% include 'testproject/testmodel.html' with object=object %}
+  {% include 'testapp/testmodel.html' with object=object %}
   {% endfor %}
 </table>
 {% endblock %}

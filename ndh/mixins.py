@@ -12,3 +12,7 @@ class NDHFormMixin(object):
 
     def get_context_data(self, **kwargs):
         return super().get_context_data(title=self.title, **kwargs)
+
+
+class NDHDeleteMixin(NDHFormMixin):
+    template_name = 'ndh/base_delete.html'
