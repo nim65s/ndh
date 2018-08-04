@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 django-autoslug-iplweb = "*"
 "django-bootstrap4" = "*"
-Django = "*"
+Django = "<2.1"
 
 [dev-packages]
 

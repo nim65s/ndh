@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 
 import os
+import re
 
 from setuptools import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
 
-with open(os.path.join(os.path.dirname(__file__), 'requirements.in')) as requirements:
-    REQUIREMENTS = [req.split('#egg=')[1] if '#egg=' in req else req for req in requirements.readlines()]
-
+with open(os.path.join(os.path.dirname(__file__), 'Pipfile')) as pipfile:
+    content = pipfile.read()
+    REQUIREMENTS = re.findall(r'''\\n[ '"]*(\S*)[ '"]*=''', content.split('packages]')[1])
+    PYTHON_VERSION = re.search(r'python_version = "([\d.]+)"', content)[1]
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
@@ -27,7 +29,7 @@ setup(
     url='https://github.com/nim65s/ndh',
     author='Guilhem Saurel',
     author_email='webmaster@saurel.me',
-    python_requires='>=3.6',
+    python_requires=f'>={PYTHON_VERSION}',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
