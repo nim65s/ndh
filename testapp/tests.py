@@ -75,6 +75,20 @@ class TestNDH(TestCase):
         r = self.client.get(TestModel.objects.first().get_absolute_url())
         self.assertIn('/admin/testapp/testmodel/1/change', r.content.decode())
 
+        # test navbar_item
+        r = self.client.get(reverse('testapp:testmodels'))
+        self.assertIn(
+            '\n'.join([
+                '<li class="nav-item active"><a class="nav-link" href="/test/">List</a></li>',
+                '<li class="nav-item "><a class="nav-link" href="/test/create">Create</a></li>',
+            ]), r.content.decode())
+        r = self.client.get(reverse('testapp:testmodel-add'))
+        self.assertIn(
+            '\n'.join([
+                '<li class="nav-item "><a class="nav-link" href="/test/">List</a></li>',
+                '<li class="nav-item active"><a class="nav-link" href="/test/create">Create</a></li>',
+            ]), r.content.decode())
+
     def test_views(self):
         self.assertEqual(TestModel.objects.count(), 0)
         r = self.client.get(reverse('testapp:testmodel-add'))

@@ -23,3 +23,10 @@ def admin_url(obj):
         obj = obj[0]._meta
         return reverse(f'admin:{obj.app_label}_{obj.model_name}_changelist')
     return reverse(f'admin:{obj._meta.app_label}_{obj._meta.model_name}_change', args=[obj.pk])
+
+
+@register.simple_tag(takes_context=True)
+def navbar_item(context, view_name, link):
+    url = reverse(view_name)
+    active = 'active' if url == context.request.path else ''
+    return mark_safe(f'<li class="nav-item {active}"><a class="nav-link" href="{url}">{link}</a></li>')
