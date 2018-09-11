@@ -2,12 +2,13 @@ language: python
 python:
   - 3.6
 install:
-  - pip install pipenv flake8 python-coveralls safety
-  - pipenv install --deploy
+  - pip install pipenv
+  - pipenv install --deploy --dev
 script:
   - ./manage.py migrate
   - coverage run manage.py test
   - flake8 .
+  - yapf -dr .
   - safety check
   - pip install 'git+https://github.com/nim65s/ndh.git#egg=ndh'
 after_success:

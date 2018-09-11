@@ -9,6 +9,10 @@ django-autoslug-iplweb = "*"
 Django = "*"
 
 [dev-packages]
+"flake8" = "*"
+python-coveralls = "*"
+safety = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.6"
