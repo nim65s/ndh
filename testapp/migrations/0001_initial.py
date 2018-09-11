@@ -11,8 +11,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
@@ -23,7 +22,9 @@ class Migration(migrations.Migration):
                 ('updated', models.DateTimeField(auto_now=True)),
                 ('name', models.CharField(max_length=200, unique=True)),
                 ('slug', autoslug.fields.AutoSlugField(editable=False, populate_from='name', unique=True)),
-                ('year_in_school', models.IntegerField(choices=[(1, 'freshman'), (2, 'sophomore'), (3, 'junior'), (4, 'senior')], default=1)),
+                ('year_in_school',
+                 models.IntegerField(
+                     choices=[(1, 'freshman'), (2, 'sophomore'), (3, 'junior'), (4, 'senior')], default=1)),
                 ('tests', models.IntegerField(default=42)),
                 ('moment', models.DateTimeField()),
             ],

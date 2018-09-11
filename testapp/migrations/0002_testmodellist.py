@@ -14,11 +14,18 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TestModelList',
             fields=[
-                ('testmodel_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='testapp.TestModel')),
+                ('testmodel_ptr',
+                 models.OneToOneField(
+                     auto_created=True,
+                     on_delete=django.db.models.deletion.CASCADE,
+                     parent_link=True,
+                     primary_key=True,
+                     serialize=False,
+                     to='testapp.TestModel')),
             ],
             options={
                 'abstract': False,
             },
-            bases=('testapp.testmodel',),
+            bases=('testapp.testmodel', ),
         ),
     ]
