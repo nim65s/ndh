@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "48a6cefd95b117b8e66e8b40e06e415fc02040123d37b472344f099855a2cdbc"
+            "sha256": "4aaafe07ab4e0db5c4ed4dc3beeb86be0d84766867e8648ea57d57fbc26a853b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,10 +24,10 @@
             "index": "pypi",
             "version": "==2.1.7"
         },
-        "django-autoslug-iplweb": {
+        "django-autoslug": {
             "hashes": [
-                "sha256:6ddec119072067e78cbdb53f7ba11ae8bee5a2f2f0fe1d90c6a4d3c0a91489d3",
-                "sha256:8a3ba49b18f082e29ac9cb17884d4b2149ad14988bd89e118b1c5ddf94fdea8e"
+                "sha256:08ba143ce5914d2689972c0adaea56abc37fb7175e9f6939fe0e3ac26374e7a0",
+                "sha256:aece8613eb173854462c656e91d81aa7ddfacaa49fb500d549f2143d1ce48721"
             ],
             "index": "pypi",
             "version": "==1.9.4"
