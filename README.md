@@ -6,8 +6,8 @@
 
 ## Requirements
 
-- Python 3.6
-- Django 2.0
+- Python 3.6+
+- Django 2.0+
 - [django-autoslug](https://github.com/justinmayer/django-autoslug)
 - [django-bootstrap4](https://github.com/zostera/django-bootstrap4)
 
