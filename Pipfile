@@ -15,6 +15,7 @@ safety = "*"
 yapf = "*"
 mypy = "*"
 django-stubs = "*"
+pydocstyle = "*"
 
 [requires]
 python_version = "3.8"

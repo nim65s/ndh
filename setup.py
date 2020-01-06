@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+"""Packaging configuration."""
 
 import os
 import re

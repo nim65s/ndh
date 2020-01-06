@@ -1,3 +1,4 @@
+"""Define URLs for the test app."""
 from django.urls import path
 from django.views.generic import DetailView, ListView, TemplateView
 

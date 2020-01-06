@@ -1,3 +1,4 @@
+"""Main entrypoint for test project & app."""
 import os
 from datetime import timedelta
 
@@ -12,8 +13,9 @@ from .models import TestModel, TestModelList, TestModelPK
 
 
 class TestNDH(TestCase):
+    """Main class to test ndh functionnalities."""
     def test_models(self):
-
+        """Test ndh.models."""
         # test creation
         self.assertEqual(TestModel.objects.count(), 0)
         TestModel.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
@@ -51,6 +53,7 @@ class TestNDH(TestCase):
         self.assertEqual(TestModel.objects.name_ordered().first(), first)
 
     def test_templatetags(self):
+        """Test ndh.templatetags."""
         r = self.client.get(reverse('test'))
         self.assertEqual(r.status_code, 200)
         mail = '<span class="mail">test<span class="at"></span>example<span class="dot"></span>org</span>'
@@ -90,6 +93,7 @@ class TestNDH(TestCase):
             ]), r.content.decode())
 
     def test_views(self):
+        """Test testapp.views."""
         self.assertEqual(TestModel.objects.count(), 0)
         r = self.client.get(reverse('testapp:testmodel-add'))
         self.assertEqual(r.status_code, 200)
@@ -116,14 +120,17 @@ class TestNDH(TestCase):
         self.assertEqual(TestModel.objects.count(), 0)
 
     def test_absolute_url_list(self):
+        """Test ndh.models's get_absolute_url for lists."""
         instance = TestModelList.objects.create(name='Pipo 22 é@ü', moment=timezone.now())
         self.assertEqual(instance.get_absolute_url(), reverse('testapp:testmodellists'))
 
     def test_absolute_url_pk(self):
+        """Test ndh.models's get_absolute_url for objects."""
         instance = TestModelPK.objects.create()
         self.assertEqual(instance.get_absolute_url(), f'/test/pk/{instance.pk}')
 
     def test_utils(self):
+        """Test ndh.utils."""
         key, val, no_key, env_file = 'DJANGO_TEST_GET_ENV', 'it=works', 'KEY_WITHOUT_VAL', '.env'
         get_env(env_file)
         if key in os.environ:
@@ -145,6 +152,7 @@ class TestNDH(TestCase):
             f.write('\n'.join(line for line in lines if not line.startswith(key) and not line.startswith(no_key)))
 
     def test_context_processors(self):
+        """Test ndh.context_processors."""
         self.assertNotIn('UTC', self.client.get(reverse('testapp:settings')).content.decode())
         with self.settings(NDH_TEMPLATES_SETTINGS=['TIME_ZONE']):
             self.assertIn('UTC', self.client.get(reverse('testapp:settings')).content.decode())

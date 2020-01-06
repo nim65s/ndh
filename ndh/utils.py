@@ -25,7 +25,7 @@ def query_sum(queryset, field):
     return queryset.aggregate(s=models.functions.Coalesce(models.Sum(field), 0))['s']
 
 
-def get_env(env_file='.env'):
+def get_env(env_file: str = '.env') -> None:
     """
     Set default environment variables from .env file
     """
