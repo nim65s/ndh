@@ -14,7 +14,8 @@ with open(os.path.join(os.path.dirname(__file__), 'Pipfile')) as pipfile:
     content = pipfile.read()
     REQUIREMENTS = re.findall(r'''\n *['"]?([\w-]*)['"]? *=''', content.split('packages]')[1])
 
-VERSION = [tag for tag in check_output(['git', 'tag', '-l']).decode().split() if tag.startswith('v')][-1][1:]
+VERSIONS = [tag for tag in check_output(['git', 'tag', '-l']).decode().split() if tag.startswith('v')]
+VERSION = sorted(VERSIONS, key=lambda v: [int(i) for i in v[1:].split('.')])[-1][1:]
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
