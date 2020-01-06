@@ -2,10 +2,10 @@ from django.db import models
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 
-from autoslug import AutoSlugField
+from autoslug import AutoSlugField  # type: ignore
 
-from .utils import full_url
 from .querysets import NameOrderedQuerySet
+from .utils import full_url
 
 
 class Links(object):

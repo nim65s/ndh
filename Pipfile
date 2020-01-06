@@ -13,6 +13,8 @@ Django = "*"
 python-coveralls = "*"
 safety = "*"
 yapf = "*"
+mypy = "*"
+django-stubs = "*"
 
 [requires]
 python_version = "3.8"
