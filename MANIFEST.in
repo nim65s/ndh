@@ -1,4 +1,0 @@
-include LICENSE
-include Pipfile
-include README.md
-recursive-include ndh *

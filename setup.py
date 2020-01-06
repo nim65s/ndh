@@ -3,7 +3,6 @@
 
 import os
 import re
-from subprocess import check_output
 
 from setuptools import setup  # type: ignore
 
@@ -14,28 +13,25 @@ with open(os.path.join(os.path.dirname(__file__), 'Pipfile')) as pipfile:
     content = pipfile.read()
     REQUIREMENTS = re.findall(r'''\n *['"]?([\w-]*)['"]? *=''', content.split('packages]')[1])
 
-VERSIONS = [tag for tag in check_output(['git', 'tag', '-l']).decode().split() if tag.startswith('v')]
-VERSION = sorted(VERSIONS, key=lambda v: [int(i) for i in v[1:].split('.')])[-1][1:]
-
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='ndh',
-    version=VERSION,
     packages=['ndh'],
     install_requires=REQUIREMENTS,
     include_package_data=True,
-    exclude_package_data={'': ['*.orig', '*.pyc']},
     license='BSD',
     description='Nim’s Django Helpers',
     long_description=README,
     long_description_content_type="text/markdown",
     url='https://github.com/nim65s/ndh',
     author='Guilhem Saurel',
-    author_email='webmaster@saurel.me',
+    author_email='guilhem.saurel@laas.fr',
     python_requires='>=3.6',
     zip_safe=False,
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

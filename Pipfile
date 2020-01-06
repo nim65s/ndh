@@ -17,6 +17,7 @@ mypy = "*"
 django-stubs = "*"
 pydocstyle = "*"
 pre-commit = "*"
+setuptools-scm = "*"
 
 [requires]
 python_version = "3.8"
