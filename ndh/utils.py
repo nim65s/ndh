@@ -1,9 +1,10 @@
 import os
+from typing import Generator, Tuple
 
 from django.db import models
 
 
-def full_url(url='', domain=None, protocol='https'):
+def full_url(url: str = '', domain: str = None, protocol: str = 'https') -> str:
     """
     Prepend protocol (default to https) and domain name (default from the Site framework) to an url
     """
@@ -13,7 +14,7 @@ def full_url(url='', domain=None, protocol='https'):
     return f'{protocol}://{domain}{url}'
 
 
-def enum_to_choices(enum):
+def enum_to_choices(enum) -> Generator[Tuple[int, str], None, None]:
     return ((item.value, item.name) for item in list(enum))
 
 

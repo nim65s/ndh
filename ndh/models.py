@@ -18,13 +18,13 @@ class Links(object):
         else:
             return reverse(f'{app}:{model}s')
 
-    def get_full_url(self):
+    def get_full_url(self) -> str:
         return full_url(self.get_absolute_url())
 
     def get_admin_url(self):
         return reverse(f'admin:{self._meta.app_label}_{self._meta.model_name}_change', args=[self.id])
 
-    def get_link(self):
+    def get_link(self) -> str:
         return mark_safe(f'<a href="{self.get_absolute_url()}">{self}</a>')
 
 
@@ -45,5 +45,5 @@ class NamedModel(models.Model):
     class Meta:
         abstract = True
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name

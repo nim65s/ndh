@@ -1,3 +1,5 @@
+from typing import Dict
+
 from django import template
 from django.db.models.query import QuerySet
 from django.urls import reverse
@@ -7,7 +9,7 @@ register = template.Library()
 
 
 @register.simple_tag(takes_context=True)
-def show_email(context, mail):
+def show_email(context: Dict, mail: str) -> str:
     request = context['request']
     if request.user.is_authenticated:
         content = f'<a href="mailto:{mail}">{mail}</a>'
@@ -18,7 +20,7 @@ def show_email(context, mail):
 
 
 @register.filter
-def admin_url(obj):
+def admin_url(obj) -> str:
     if isinstance(obj, QuerySet):
         obj = obj[0]._meta
         return reverse(f'admin:{obj.app_label}_{obj.model_name}_changelist')
@@ -26,7 +28,7 @@ def admin_url(obj):
 
 
 @register.simple_tag(takes_context=True)
-def navbar_item(context, view_name, link):
+def navbar_item(context, view_name: str, link: str) -> str:
     url = reverse(view_name)
     active = 'active' if url == context.request.path else ''
     return mark_safe(f'<li class="nav-item {active}"><a class="nav-link" href="{url}">{link}</a></li>')
