@@ -26,6 +26,7 @@ setup(
     packages=['ndh'],
     install_requires=REQUIREMENTS,
     include_package_data=True,
+    exclude_package_data={'': ['*.orig', '*.pyc']},
     license='BSD',
     description='Nim’s Django Helpers',
     long_description=README,
@@ -34,6 +35,7 @@ setup(
     author='Guilhem Saurel',
     author_email='webmaster@saurel.me',
     python_requires='>=3.6',
+    zip_safe=False,
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
