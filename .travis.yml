@@ -11,6 +11,7 @@ script:
   - flake8 .
   - yapf -dr .
   - mypy .
+  - pydocstyle
   - safety check
   - pip install "git+https://github.com/${TRAVIS_REPO_SLUG}.git#egg=ndh"
 after_success:
