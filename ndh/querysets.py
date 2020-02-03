@@ -1,6 +1,6 @@
-from django.db import models
+from django.db.models import QuerySet
 
 
-class NameOrderedQuerySet(models.QuerySet):
-    def name_ordered(self):
+class NameOrderedQuerySet(QuerySet):
+    def name_ordered(self) -> QuerySet:
         return self.order_by('name')

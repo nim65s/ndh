@@ -1,7 +1,10 @@
 import os
-from typing import Generator, Tuple
+from typing import Generator, Tuple, TypeVar
 
 from django.db import models
+from django.db.models.functions import Coalesce
+
+Numeric = TypeVar('Numeric', int, float)
 
 
 def full_url(url: str = '', domain: str = None, protocol: str = 'https') -> str:
@@ -18,11 +21,11 @@ def enum_to_choices(enum) -> Generator[Tuple[int, str], None, None]:
     return ((item.value, item.name) for item in list(enum))
 
 
-def query_sum(queryset, field):
+def query_sum(queryset: models.QuerySet, field: str) -> Numeric:
     """
     Let the DBMS perform a sum on a queryset
     """
-    return queryset.aggregate(s=models.functions.Coalesce(models.Sum(field), 0))['s']
+    return queryset.aggregate(s=Coalesce(models.Sum(field), 0))['s']
 
 
 def get_env(env_file: str = '.env') -> None:
