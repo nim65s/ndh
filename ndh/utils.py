@@ -1,6 +1,7 @@
 """General utils for NDH."""
 import os
 from typing import Generator, Tuple, TypeVar
+from warnings import warn
 
 from django.db import models
 from django.db.models.functions import Coalesce
@@ -18,6 +19,8 @@ def full_url(url: str = '', domain: str = None, protocol: str = 'https') -> str:
 
 def enum_to_choices(enum) -> Generator[Tuple[int, str], None, None]:
     """Allow to use an Enum as choices in a model field."""
+    url = "https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types"
+    warn(f"ndh.utils.enum_to_choices is deprecated. Please switch to {url}", DeprecationWarning)
     return ((item.value, item.name) for item in list(enum))
 
 
@@ -29,8 +32,8 @@ def query_sum(queryset: models.QuerySet, field: str) -> Numeric:
 def get_env(env_file: str = '.env') -> None:
     """Set default environment variables from .env file."""
     try:
-        with open(env_file) as f:
-            for line in f.readlines():
+        with open(env_file) as f_h:
+            for line in f_h.readlines():
                 try:
                     key, val = line.split('=', maxsplit=1)
                     os.environ.setdefault(key.strip(), val.strip())
