@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ndh's documentation!
-===============================
+Welcome to Nim Django Helpers documentation!
+============================================
 
 .. toctree::
    :maxdepth: 2
