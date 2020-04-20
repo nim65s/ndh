@@ -15,6 +15,7 @@ script:
   - mypy .
   - pydocstyle
   - safety check
+  - sphinx-build docs build
   - pip install "git+https://github.com/${TRAVIS_REPO_SLUG}.git#egg=ndh"
 after_success:
   - coveralls
