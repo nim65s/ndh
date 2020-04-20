@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 django-autoslug = "*"
-"django-bootstrap4" = "*"
+"django-bootstrap4" = "!=1.1.1"
 Django = "*"
 
 [dev-packages]
@@ -18,3 +18,4 @@ django-stubs = "*"
 pydocstyle = "*"
 pre-commit = "*"
 setuptools-scm = "*"
+sphinx = "*"
