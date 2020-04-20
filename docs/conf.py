@@ -19,7 +19,7 @@ import django
 from setuptools_scm import get_version
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
-sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath('..'))
 django.setup()
 
 # -- Project information -----------------------------------------------------
@@ -28,7 +28,7 @@ project = 'ndh'
 copyright = '2020, Guilhem Saurel'
 author = 'Guilhem Saurel'
 
-release = get_version(root=('../..'))
+release = get_version(root=('..'))
 
 # -- General configuration ---------------------------------------------------
 
