@@ -1,4 +1,5 @@
 # Nim's Django Helpers
+[![Documentation Status](https://readthedocs.org/projects/ndh/badge/?version=latest)](https://ndh.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/ndh.svg)](https://pypi.org/project/ndh)
 [![Build Status](https://travis-ci.org/nim65s/ndh.svg?branch=master)](https://travis-ci.org/nim65s/ndh)
 [![Coverage Status](https://coveralls.io/repos/github/nim65s/ndh/badge.svg?branch=master)](https://coveralls.io/github/nim65s/ndh?branch=master)
