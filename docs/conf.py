@@ -16,7 +16,7 @@ import sys
 from typing import List
 
 import django
-from setuptools_scm import get_version
+from setuptools_scm import get_version  # type: ignore
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 sys.path.insert(0, os.path.abspath('..'))
