@@ -16,7 +16,7 @@ script:
   - yapf -dr .
   - mypy .
   - pydocstyle
-  - safety check
+  #- safety check  issue about py 1.9.0 on travis
   - sphinx-build docs build
   - pip install "git+https://github.com/${TRAVIS_REPO_SLUG}.git#egg=ndh"
 after_success:
