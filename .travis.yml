@@ -1,14 +1,16 @@
 language: python
-dist: bionic
+dist: focal
 python:
   - 3.6
   - 3.7
   - 3.8
+  - 3.9
 install:
-  - pip install -U pipenv
-  - pipenv install --deploy --dev
+  - pip install poetry
+  - poetry config virtualenvs.create false --local
+  - poetry install --no-interaction --no-ansi
 script:
-  - ./manage.py migrate
+  - python -Wa ./manage.py migrate
   - PYTHONWARNINGS=always coverage run manage.py test
   - flake8 .
   - yapf -dr .

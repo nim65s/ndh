@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ndh"
+version = "3.10.4"
+description = "Nim's Django Helpers"
+authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
+license = "BSD-2-Clause"
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+django-autoslug = "^1.9.8"
+django-bootstrap4 = "^2.3.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.0"
+python-coveralls = "^2.9.3"
+safety = "^1.10.3"
+yapf = "^0.31.0"
+mypy = "^0.812"
+django-stubs = "^1.7.0"
+pydocstyle = "^6.0.0"
+pre-commit = "^2.11.1"
+setuptools-scm = "^6.0.1"
+Sphinx = "^3.5.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
