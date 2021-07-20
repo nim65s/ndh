@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.0.1
     hooks:
     -   id: check-added-large-files
     -   id: check-ast
@@ -18,11 +18,11 @@ repos:
     hooks:
     -   id: yapf
 -   repo: https://github.com/PyCQA/pydocstyle
-    rev: 6.0.0
+    rev: 6.1.1
     hooks:
     -   id: pydocstyle
--   repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.0
+-   repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
     hooks:
     -   id: flake8
 -   repo: https://gitlab.com/smop/pre-commit-hooks
@@ -31,7 +31,7 @@ repos:
     -   id: check-poetry
     -   id: check-gitlab-ci
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.812
+    rev: v0.910
     hooks:
     -   id: mypy
         additional_dependencies:
