@@ -1,11 +1,8 @@
-name: Tests
+name: Lints
 on: [push, pull_request]
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6,3.7,3.8,3.9]
     steps:
       - uses: actions/checkout@v2
 
@@ -17,8 +14,11 @@ jobs:
           pip install -U poetry setuptools
           poetry config virtualenvs.create false --local
           poetry install --no-interaction --no-ansi
-      - run: python -Wa ./manage.py migrate
-      - run: PYTHONWARNINGS=always coverage run manage.py test
-      - run: pip install "git+https://github.com/${GITHUB_REPOSITORY}.git#egg=ndh"
+      - run: flake8 .
+      - run: yapf -dr .
+      - run: mypy .
+      - run: pydocstyle
+      - run: safety check
+      - run: sphinx-build docs build
 
       - uses: codecov/codecov-action@v1
