@@ -1,6 +1,6 @@
 """General utils for NDH."""
 import os
-from typing import Generator, Tuple, TypeVar
+from typing import Generator, Optional, Tuple, TypeVar
 from warnings import warn
 
 from django.db import models
@@ -24,9 +24,9 @@ def enum_to_choices(enum) -> Generator[Tuple[int, str], None, None]:
     return ((item.value, item.name) for item in list(enum))
 
 
-def query_sum(queryset: models.QuerySet, field: str) -> Numeric:
+def query_sum(queryset: models.QuerySet, field: str, output_field: Optional[models.Field] = None) -> Numeric:
     """Let the DBMS perform a sum on a queryset."""
-    return queryset.aggregate(s=Coalesce(models.Sum(field), 0))['s']
+    return queryset.aggregate(s=Coalesce(models.Sum(field), 0, output_field=output_field))['s']
 
 
 def get_env(env_file: str = '.env') -> None:

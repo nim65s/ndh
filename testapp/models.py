@@ -2,7 +2,6 @@
 from enum import IntEnum
 
 from django.db import models
-
 from ndh.models import Links, NamedModel, TimeStampedModel
 from ndh.utils import enum_to_choices
 
@@ -13,6 +12,7 @@ class TestModel(Links, TimeStampedModel, NamedModel):
 
     year_in_school = models.IntegerField(choices=enum_to_choices(YEARS_IN_SCHOOL), default=1)
     tests = models.IntegerField(default=42)
+    tests_decimal = models.DecimalField(default=3.14, max_digits=5, decimal_places=2)
     moment = models.DateTimeField()
 
 

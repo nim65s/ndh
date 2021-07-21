@@ -1,12 +1,13 @@
 """Main entrypoint for test project & app."""
 import os
 from datetime import timedelta
+from decimal import Decimal
 
 from django.contrib.auth.models import User
+from django.db import models
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
-
 from ndh.utils import get_env, query_sum
 
 from .models import TestModel, TestModelList, TestModelPK
@@ -42,6 +43,8 @@ class TestNDH(TestCase):
 
         # test query_sum
         self.assertEqual(query_sum(TestModel.objects.all(), 'tests'), 42)
+        self.assertEqual(query_sum(TestModel.objects.all(), 'tests_decimal', output_field=models.DecimalField()),
+                         Decimal("3.14"))
 
         # test enum_to_choices
         self.assertEqual(instance.get_year_in_school_display(), 'freshman')
