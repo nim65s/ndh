@@ -1,2 +1,3 @@
 -r generated_requirements.txt
 setuptools-scm
+myst-parser
