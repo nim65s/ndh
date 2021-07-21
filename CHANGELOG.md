@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - added `output_field` argument for `query_sum`, and a unit test
 - added documentation
 - added changelog
+- setup automatic publication on PyPI & Docker Hub
 - internaly fixed W042
 - internaly switched from pipenv to poetry
 - internaly switched from travis to github actions
