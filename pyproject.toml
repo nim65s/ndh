@@ -4,6 +4,9 @@ version = "3.11.0"
 description = "Nim's Django Helpers"
 authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
 license = "BSD-2-Clause"
+readme = "README.md"
+homepage = "https://github.com/nim65s/ndh"
+repository = "https://github.com/nim65s/ndh.git"
 
 [tool.poetry.dependencies]
 python = "^3.6.1"

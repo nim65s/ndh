@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Unreleased
+
+- add README on PyPI
+
 ## [3.11.0] - 2021-07-25
 
 - :warning: deprecated `enum_to_choices`, as [a better
