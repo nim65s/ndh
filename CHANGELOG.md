@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.11.0] - 2021-07-25
+
 - :warning: deprecated `enum_to_choices`, as [a better
   version](https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types) is available in django 3.0.
 - added `output_field` argument for `query_sum`, and a unit test
@@ -99,7 +101,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v3.10.4...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v3.11.0...master
+[3.11.0]: https://github.com/nim65s/ndh/compare/v3.10.4...v3.11.0
 [3.10.4]: https://github.com/nim65s/ndh/compare/v3.10.3...v3.10.4
 [3.10.3]: https://github.com/nim65s/ndh/compare/v3.10.2...v3.10.3
 [3.10.2]: https://github.com/nim65s/ndh/compare/v3.10.1...v3.10.2
