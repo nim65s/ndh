@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [3.11.1] - 2021-07-25
+
 - add README on PyPI
 
 ## [3.11.0] - 2021-07-25
@@ -105,7 +107,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v3.11.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v3.11.1...master
+[3.11.1]: https://github.com/nim65s/ndh/compare/v3.11.0...v3.11.1
 [3.11.0]: https://github.com/nim65s/ndh/compare/v3.10.4...v3.11.0
 [3.10.4]: https://github.com/nim65s/ndh/compare/v3.10.3...v3.10.4
 [3.10.3]: https://github.com/nim65s/ndh/compare/v3.10.2...v3.10.3
