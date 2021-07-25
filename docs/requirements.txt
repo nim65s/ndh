@@ -127,9 +127,6 @@ imagesize==1.2.0; python_version >= "3.6" and python_full_version < "3.0.0" or p
 importlib-metadata==2.1.1; python_version >= "3.6" and python_version < "3.8" and python_full_version >= "3.6.1" and (python_version >= "3.6" and python_full_version < "3.0.0" and python_version < "3.8" or python_version < "3.8" and python_version >= "3.6" and python_full_version >= "3.5.0") \
     --hash=sha256:c2d6341ff566f609e89a2acb2db190e5e1d23d5409d6cc8d2fe34d72443876d4 \
     --hash=sha256:b8de9eff2b35fb037368f28a7df1df4e6436f578fa74423505b6c6a778d5b5dd
-importlib-resources==5.2.0; python_version < "3.7" and python_full_version >= "3.6.1" and python_version >= "3.6" \
-    --hash=sha256:a0143290bef3cbc99de9e40176e4987780939a955b8632f02ce6c935f42e9bfc \
-    --hash=sha256:22a2c42d8c6a1d30aa8a0e1f57293725bfd5c013d562585e46aff469e0ff78b3
 jinja2==3.0.1; python_version >= "3.6" \
     --hash=sha256:1f06f2da51e7b56b8f238affdd6b4e2c61e39598a378cc49345bc1bd42a978a4 \
     --hash=sha256:703f484b47a6af502e743c9122595cc812b0271f661722403114f71a79d0f5a4
@@ -355,6 +352,6 @@ virtualenv==20.6.0; python_full_version >= "3.6.1" \
 yapf==0.31.0 \
     --hash=sha256:e3a234ba8455fe201eaa649cdac872d590089a18b661e39bbac7020978dd9c2e \
     --hash=sha256:408fb9a2b254c302f49db83c59f9aa0b4b0fd0ec25be3a5c51181327922ff63d
-zipp==3.5.0; python_version >= "3.6" and python_version < "3.7" and python_full_version >= "3.6.1" \
+zipp==3.5.0; python_version >= "3.6" and python_full_version < "3.0.0" and python_version < "3.8" or python_version >= "3.6" and python_version < "3.8" and python_full_version >= "3.5.0" \
     --hash=sha256:957cfda87797e389580cb8b9e3870841ca991e2125350677b2ca83a0e99390a3 \
     --hash=sha256:f5812b1e007e48cff63449a5e9f4e7ebea716b4111f9c4f9a645f91d579bf0c4
