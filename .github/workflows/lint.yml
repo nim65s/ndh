@@ -20,5 +20,3 @@ jobs:
       - run: pydocstyle
       - run: safety check
       - run: sphinx-build docs build
-
-      - uses: codecov/codecov-action@v1
