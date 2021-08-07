@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v3.12.3] - 2021-08-07
+
 - fix release action
 
 ## [v3.12.2] - 2021-08-07
@@ -121,7 +123,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v3.12.2...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v3.12.3...master
+[v3.12.3]: https://github.com/nim65s/ndh/compare/v3.12.2...v3.12.3
 [v3.12.2]: https://github.com/nim65s/ndh/compare/v3.12.1...v3.12.2
 [v3.12.1]: https://github.com/nim65s/ndh/compare/v3.12.0...v3.12.1
 [v3.12.0]: https://github.com/nim65s/ndh/compare/v3.11.1...v3.12.0
