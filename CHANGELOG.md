@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v3.12.0] - 2021-08-07
+
 - fix docs generation
 - fix tags name in CHANGELOG
 - setup github release from github actions
@@ -109,7 +111,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v3.11.1...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v3.12.0...master
+[v3.12.0]: https://github.com/nim65s/ndh/compare/v3.11.1...v3.12.0
 [v3.11.1]: https://github.com/nim65s/ndh/compare/v3.11.0...v3.11.1
 [v3.11.0]: https://github.com/nim65s/ndh/compare/v3.10.4...v3.11.0
 [v3.10.4]: https://github.com/nim65s/ndh/compare/v3.10.3...v3.10.4
