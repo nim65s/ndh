@@ -1,4 +1,4 @@
-name: PyPI
+name: Release on GitHub & PyPI
 
 on:
   push:
@@ -6,10 +6,15 @@ on:
       - 'v*'
 
 jobs:
-  pypi:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: pip install -U poetry twine wheel
       - run: poetry build
       - run: twine upload --non-interactive -u __token__ -p ${{ secrets.PYPI_TOKEN }} dist/*
+      - run: |
+        TAG=${GITHUB_REF#refs/tags/}
+        RLZ="Release $TAG"
+        MSG=$(awk "/## \[$TAG]/{flag=1;next}/## \[/{flag=0}flag" CHANGELOG.md)
+        gh release create -d -t $RLZ -n $MSG $TAG dist/*

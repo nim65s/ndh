@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - fix docs generation
+- fix tags name in CHANGELOG
+- setup github release from github actions
 
 ## [v3.11.1] - 2021-07-25
 
