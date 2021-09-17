@@ -1,9 +1,7 @@
-{% load bootstrap4 %}
+{% load django_bootstrap5 %}
 <form method="post" action="" class="form-horizontal" role="form">
   {% csrf_token %}
   {% bootstrap_form form layout="horizontal" %}
-  {% buttons layout="horizontal" %}
-    <button class="btn btn-success" type="submit">Ok</button>
-    <button class="btn btn-danger" href="javascript:history.back()">Nope</button>
-  {% endbuttons %}
+  {% bootstrap_button "Ok" button_type="submit" button_class="btn-success" %}
+  {% bootstrap_button "Nope" button_class="btn-danger" href="javascript:history.back()" %}
 </form>

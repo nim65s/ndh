@@ -36,6 +36,6 @@ repos:
     -   id: mypy
         additional_dependencies:
         -   django-autoslug
-        -   django-bootstrap4
+        -   django-bootstrap5
         -   django-stubs
         -   types-setuptools
