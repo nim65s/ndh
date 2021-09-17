@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v4.0.0] - 2021-09-17
+
 - :warning: BREAKING :warning: bootstrap 4 → 5. Please read
   [boostrap 5 migration guide](https://getbootstrap.com/docs/5.1/migration/) and
   [django-bootstrap5 migration guide](https://django-bootstrap5.readthedocs.io/en/latest/migrate.html)
@@ -141,7 +143,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v3.12.6...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v4.0.0...master
+[v4.0.0]: https://github.com/nim65s/ndh/compare/v3.12.6...v4.0.0
 [v3.12.6]: https://github.com/nim65s/ndh/compare/v3.12.5...v3.12.6
 [v3.12.5]: https://github.com/nim65s/ndh/compare/v3.12.4...v3.12.5
 [v3.12.4]: https://github.com/nim65s/ndh/compare/v3.12.3...v3.12.4
