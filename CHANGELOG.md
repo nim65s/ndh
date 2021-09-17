@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - fix doc generation
+- require python >= 3.8
 
 ## [v4.0.0] - 2021-09-17
 
