@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix doc generation
+
 ## [v4.0.0] - 2021-09-17
 
 - :warning: BREAKING :warning: bootstrap 4 → 5. Please read
