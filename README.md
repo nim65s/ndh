@@ -9,7 +9,7 @@
 
 ## Requirements
 
-- Python 3.6+
+- Python 3.8+
 - Django 3.0+
 - [django-autoslug](https://github.com/justinmayer/django-autoslug)
 - [django-bootstrap5](https://github.com/zostera/django-bootstrap5)
