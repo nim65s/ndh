@@ -1,7 +1,6 @@
 """General utils for NDH."""
 import os
-from typing import Generator, Optional, Tuple, TypeVar
-from warnings import warn
+from typing import Optional, TypeVar
 
 from django.db import models
 from django.db.models.functions import Coalesce
@@ -15,13 +14,6 @@ def full_url(url: str = '', domain: str = None, protocol: str = 'https') -> str:
         from django.contrib.sites.models import Site
         domain = Site.objects.get_current().domain
     return f'{protocol}://{domain}{url}'
-
-
-def enum_to_choices(enum) -> Generator[Tuple[int, str], None, None]:
-    """Allow to use an Enum as choices in a model field."""
-    url = "https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types"
-    warn(f"ndh.utils.enum_to_choices is deprecated. Please switch to {url}", DeprecationWarning)
-    return ((item.value, item.name) for item in list(enum))
 
 
 def query_sum(queryset: models.QuerySet, field: str, output_field: Optional[models.Field] = None) -> Numeric:

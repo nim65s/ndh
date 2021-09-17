@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - :warning: BREAKING :warning: bootstrap 4 → 5. Please read
   [boostrap 5 migration guide](https://getbootstrap.com/docs/5.1/migration/) and
   [django-bootstrap5 migration guide](https://django-bootstrap5.readthedocs.io/en/latest/migrate.html)
+- :warning: BREAKING :warning: remove deprecated `enum_to_choices`
+- require django >= 3
 
 ## [v3.12.6] - 2021-08-07
 

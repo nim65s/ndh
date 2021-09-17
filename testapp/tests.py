@@ -45,10 +45,6 @@ class TestNDH(TestCase):
         self.assertEqual(query_sum(TestModel.objects.all(), 'tests'), 42)
         self.assertEqual(query_sum(TestModel.objects.all(), 'tests_decimal', output_field=models.DecimalField()),
                          Decimal("3.14"))
-
-        # test enum_to_choices
-        self.assertEqual(instance.get_year_in_school_display(), 'freshman')
-
         # test ordering
         first = TestModel.objects.create(name='Abc', moment=timezone.now())
         self.assertFalse(TestModel.objects.all().ordered)
@@ -100,7 +96,7 @@ class TestNDH(TestCase):
         self.assertEqual(TestModel.objects.count(), 0)
         r = self.client.get(reverse('testapp:testmodel-add'))
         self.assertEqual(r.status_code, 200)
-        data = {'name': 'Pipè', 'year_in_school': 2, 'tests': 3, 'moment_0': '2017-12-06', 'moment_1': '03:19:45'}
+        data = {'name': 'Pipè', 'tests': 3, 'moment_0': '2017-12-06', 'moment_1': '03:19:45'}
         r = self.client.post(reverse('testapp:testmodel-add'), data)
 
         self.assertIn(r.content.decode(), 'Create Test')

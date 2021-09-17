@@ -15,4 +15,4 @@ class TestForm(ModelForm):
         """ModelForm definitions."""
 
         model = TestModel
-        fields = ('name', 'year_in_school', 'tests', 'moment')
+        fields = ('name', 'tests', 'moment')
