@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.0.0] - 2021-09-17
+
+- :warning: BREAKING :warning: require python >= 3.8
 - fix doc generation
-- require python >= 3.8
 
 ## [v4.0.0] - 2021-09-17
 
@@ -146,7 +148,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v4.0.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.0.0...master
+[v5.0.0]: https://github.com/nim65s/ndh/compare/v4.0.0...v5.0.0
 [v4.0.0]: https://github.com/nim65s/ndh/compare/v3.12.6...v4.0.0
 [v3.12.6]: https://github.com/nim65s/ndh/compare/v3.12.5...v3.12.6
 [v3.12.5]: https://github.com/nim65s/ndh/compare/v3.12.4...v3.12.5
