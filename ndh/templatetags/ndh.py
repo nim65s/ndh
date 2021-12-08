@@ -24,7 +24,7 @@ def show_email(context: Dict, mail: str) -> str:
 @register.filter
 def admin_url(obj) -> str:
     """Get the admin url of a Model or QuerySet instance."""
-    if isinstance(obj, QuerySet):
+    if isinstance(obj, QuerySet):  # type: ignore
         obj = obj[0]._meta
         return reverse(f'admin:{obj.app_label}_{obj.model_name}_changelist')
     return reverse(f'admin:{obj._meta.app_label}_{obj._meta.model_name}_change', args=[obj.pk])
