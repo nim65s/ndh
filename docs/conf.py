@@ -25,7 +25,7 @@ django.setup()
 # -- Project information -----------------------------------------------------
 
 project = 'ndh'
-copyright = '2020, Guilhem Saurel'
+copyright = '2017-2021, Guilhem Saurel'
 author = 'Guilhem Saurel'
 
 release = check_output(['poetry', 'version', '-s'], text=True).strip()
