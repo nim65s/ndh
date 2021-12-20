@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.1.0] - 2021-12-20
+
 - remove obsolete boostrap 4 css
 - remove setuptools & setup.py
 
@@ -155,7 +157,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v5.0.1...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.1.0...master
+[v5.1.0]: https://github.com/nim65s/ndh/compare/v5.0.1...v5.1.0
 [v5.0.1]: https://github.com/nim65s/ndh/compare/v5.0.0...v5.0.1
 [v5.0.0]: https://github.com/nim65s/ndh/compare/v4.0.0...v5.0.0
 [v4.0.0]: https://github.com/nim65s/ndh/compare/v3.12.6...v4.0.0
