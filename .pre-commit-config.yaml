@@ -39,3 +39,4 @@ repos:
         -   django-bootstrap5
         -   django-stubs
         -   types-setuptools
+        -   types-toml

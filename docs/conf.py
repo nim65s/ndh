@@ -12,11 +12,11 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-from subprocess import check_output
 import sys
 from typing import List
 
 import django
+import toml
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 sys.path.insert(0, os.path.abspath('..'))
@@ -28,7 +28,8 @@ project = 'ndh'
 copyright = '2017-2021, Guilhem Saurel'
 author = 'Guilhem Saurel'
 
-release = check_output(['poetry', 'version', '-s'], text=True).strip()
+with open('pyproject.toml') as f:
+    release = toml.load(f)['tool']['poetry']['version']
 
 # -- General configuration ---------------------------------------------------
 
