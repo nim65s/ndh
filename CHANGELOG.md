@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- remove obsolete boostrap 4 css
+
 ## [v5.0.1] - 2021-09-17
 
 - fix README
