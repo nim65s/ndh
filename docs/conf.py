@@ -12,11 +12,11 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
+from subprocess import check_output
 import sys
 from typing import List
 
 import django
-from setuptools_scm import get_version  # type: ignore
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 sys.path.insert(0, os.path.abspath('..'))
@@ -28,7 +28,7 @@ project = 'ndh'
 copyright = '2020, Guilhem Saurel'
 author = 'Guilhem Saurel'
 
-release = get_version(root=('..'))
+release = check_output(['poetry', 'version', '-s'], text=True).strip()
 
 # -- General configuration ---------------------------------------------------
 
