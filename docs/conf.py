@@ -13,6 +13,7 @@
 #
 import os
 import sys
+from pathlib import Path
 from typing import List
 
 import django
@@ -28,8 +29,8 @@ project = 'ndh'
 copyright = '2017-2021, Guilhem Saurel'
 author = 'Guilhem Saurel'
 
-with open('pyproject.toml') as f:
-    release = toml.load(f)['tool']['poetry']['version']
+with (Path(__file__).parent.parent / "pyproject.toml").open() as f:
+    print(toml.load(f)['tool']['poetry']['version'])
 
 # -- General configuration ---------------------------------------------------
 
