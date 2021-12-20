@@ -99,9 +99,9 @@ django-stubs-ext==0.3.1; python_version >= "3.6" \
 django-stubs==1.8.0; python_version >= "3.6" \
     --hash=sha256:717967d7fee0a6af0746724a0be80d72831a982a40fa8f245a6a46f4cafd157b \
     --hash=sha256:bde9e44e3c4574c2454e74a3e607cc3bc23b0441bb7d1312cd677d5e30984b74
-django==3.2.7; python_version >= "3.6" \
-    --hash=sha256:e93c93565005b37ddebf2396b4dc4b6913c1838baa82efdfb79acedd5816c240 \
-    --hash=sha256:95b318319d6997bac3595517101ad9cc83fe5672ac498ba48d1a410f47afecd2
+django==3.2.10; python_version >= "3.6" \
+    --hash=sha256:df6f5eb3c797b27c096d61494507b7634526d4ce8d7c8ca1e57a4fb19c0738a3 \
+    --hash=sha256:074e8818b4b40acdc2369e67dcd6555d558329785408dcd25340ee98f1f1d5c4
 docutils==0.16; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version >= "3.6" \
     --hash=sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af \
     --hash=sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc
