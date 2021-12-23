@@ -6,6 +6,7 @@ from ndh.models import Links, NamedModel, TimeStampedModel
 
 class TestModel(Links, TimeStampedModel, NamedModel):
     """Main test model."""
+
     tests = models.IntegerField(default=42)
     tests_decimal = models.DecimalField(default=3.14, max_digits=5, decimal_places=2)
     moment = models.DateTimeField()
@@ -13,9 +14,11 @@ class TestModel(Links, TimeStampedModel, NamedModel):
 
 class TestModelList(TestModel):
     """Test model for get__absolute_url for lists."""
+
     absolute_url_detail = False
 
 
 class TestModelPK(Links, TimeStampedModel):
     """Test model for get_absolute_url for objects."""
+
     pass

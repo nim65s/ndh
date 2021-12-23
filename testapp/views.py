@@ -10,13 +10,15 @@ from .models import TestModel
 
 class TestCreateView(NDHFormMixin, CreateView):
     """View to test NDHFormMixin."""
+
     model = TestModel
     form_class = TestForm
-    title = 'Create Test'
+    title = "Create Test"
 
 
 class TestDeleteView(NDHDeleteMixin, SuperUserRequiredMixin, DeleteView):
     """View to test other mixins."""
+
     model = TestModel
-    success_url = reverse_lazy('testapp:testmodels')
-    title = 'Delete Test'
+    success_url = reverse_lazy("testapp:testmodels")
+    title = "Delete Test"

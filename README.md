@@ -6,6 +6,7 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/nim65s/ndh/master.svg)](https://results.pre-commit.ci/latest/github/nim65s/ndh/master)
 [![codecov](https://codecov.io/gh/nim65s/ndh/branch/master/graph/badge.svg?token=BLGISGCYKG)](https://codecov.io/gh/nim65s/ndh)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6737a84239590ddc0d1e/maintainability)](https://codeclimate.com/github/nim65s/ndh/maintainability)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Requirements
 

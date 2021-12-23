@@ -14,17 +14,16 @@ django-autoslug = "^1.9.8"
 django-bootstrap5 = "^2.1.2"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^3.9.0"
-safety = "^1.10.3"
-yapf = "^0.31.0"
-mypy = "^0.812"
-django-stubs = "^1.7.0"
-pydocstyle = "^6.0.0"
-pre-commit = "^2.11.1"
-Sphinx = "^3.5.3"
 coverage = "^5.5"
+black = "^21.12b0"
+django-stubs = "^1.7.0"
+flake8 = "^3.9.2"
+mypy = "^0.812"
 myst-parser = "^0.15.1"
-types-toml = "^0.10.1"
+pre-commit = "^2.11.1"
+pydocstyle = "^6.0.0"
+safety = "^1.10.3"
+Sphinx = "^3.5.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
