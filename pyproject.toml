@@ -30,7 +30,7 @@ types-toml = "^0.10.4"
 
 [tool.coverage.run]
 source = "ndh"
-omit = "*/migrations/*,*/wsgi.py,*/apps.py"
+omit = ["*/migrations/*", "*/wsgi.py", "*/apps.py"]
 
 [tool.django-stubs]
 django_settings_module = "testproject.settings"
