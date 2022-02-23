@@ -29,7 +29,7 @@ types-setuptools = "^57.4.9"
 types-toml = "^0.10.4"
 
 [tool.coverage.run]
-source = "ndh"
+source = ["ndh"]
 omit = ["*/migrations/*", "*/wsgi.py", "*/apps.py"]
 
 [tool.django-stubs]
