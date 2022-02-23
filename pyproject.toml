@@ -12,7 +12,6 @@ repository = "https://github.com/nim65s/ndh.git"
 python = "^3.8"
 django-autoslug = "^1.9.8"
 django-bootstrap5 = "^2.1.2"
-django-stubs-ext = "^0.3.1"
 
 [tool.poetry.dev-dependencies]
 coverage = {extras = ["toml"], version = "^6.3.2"}

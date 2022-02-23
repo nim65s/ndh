@@ -225,7 +225,7 @@ typing-extensions = "*"
 name = "django-stubs-ext"
 version = "0.3.1"
 description = "Monkey-patching and extensions for django-stubs"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -760,7 +760,7 @@ python-versions = "*"
 name = "typing-extensions"
 version = "4.1.1"
 description = "Backported and Experimental Type Hints for Python 3.6+"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -806,7 +806,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "26e9cba94771552dd8a3164422118ec8716417c0f6a5eb06ef298b33d18b3cc9"
+content-hash = "e708823729bf83a95fe08486835a4ad2ecaa4a05ec08152a22600b57cdf3969c"
 
 [metadata.files]
 alabaster = [

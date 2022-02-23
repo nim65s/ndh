@@ -5,12 +5,8 @@ from typing import Optional, TypeVar, Union, TYPE_CHECKING
 from django.db import models
 from django.db.models.functions import Coalesce
 
-import django_stubs_ext
-
 if TYPE_CHECKING:  # pragma: no cover
     from django.db.models.manager import RelatedManager
-
-django_stubs_ext.monkeypatch()
 
 Numeric = TypeVar("Numeric", int, float)
 
