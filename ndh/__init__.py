@@ -1,8 +1,4 @@
 """Main module entrance."""
-from pkg_resources import DistributionNotFound, get_distribution
 
-try:
-    __version__ = get_distribution(__name__).version
-except DistributionNotFound:
-    # package is not installed
-    pass
+__version__ = "5.1.2"
+__version_tuple__ = tuple(int(i) for i in __version__.split("."))
