@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load django_bootstrap5 %}
 
 {% block content %}
 <h1>{{ title }}</h1>
@@ -6,7 +7,7 @@
 <form method="post" action="" class="form-horizontal" role="form">
   {% csrf_token %}
   <p class="text-center">Êtes-vous bien sûr de vouloir supprimer {{ object }} ?<br>
-  <button class="btn btn-warning" type="submit">Supprimer</button>
-  <button class="btn btn-info" href="javascript:history.back()">Annuler</button>
+  {% bootstrap_button "Supprimer" button_class="btn-warning" button_type="submit" %}
+  {% bootstrap_button "Annuler" button_class="btn-info" href="javascript:history.back()" %}
 </form>
 {% endblock %}
