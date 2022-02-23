@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix typing for related manager
 - yapf → black
+- move most tooling conf from setup.cfg to pyproject.toml
 
 ## [v5.1.2] - 2021-12-20
 

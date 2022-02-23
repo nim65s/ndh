@@ -12,18 +12,35 @@ repository = "https://github.com/nim65s/ndh.git"
 python = "^3.8"
 django-autoslug = "^1.9.8"
 django-bootstrap5 = "^2.1.2"
+django-stubs-ext = "^0.3.1"
 
 [tool.poetry.dev-dependencies]
-coverage = "^5.5"
+coverage = {extras = ["toml"], version = "^6.3.2"}
 black = "^21.12b0"
-django-stubs = "^1.7.0"
+django-stubs = "^1.9.0"
 flake8 = "^3.9.2"
-mypy = "^0.812"
+mypy = "^0.930"
 myst-parser = "^0.15.1"
 pre-commit = "^2.11.1"
-pydocstyle = "^6.0.0"
+pydocstyle = {extras = ["toml"], version = "^6.1.1"}
 safety = "^1.10.3"
 Sphinx = "^3.5.3"
+types-setuptools = "^57.4.9"
+types-toml = "^0.10.4"
+
+[tool.coverage.run]
+source = "ndh"
+omit = "*/migrations/*,*/wsgi.py,*/apps.py"
+
+[tool.django-stubs]
+django_settings_module = "testproject.settings"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+
+[tool.pydocstyle]
+ignore = "D203,D204"  # https://github.com/google/yapf/issues/744
+match_dir = "(?=[^\\.])(?!migrations).*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
