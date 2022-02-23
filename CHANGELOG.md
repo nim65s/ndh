@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.2.0] - 2022-02-23
+
 - fix typing for related manager
 - yapf → black
 - move most tooling conf from setup.cfg to pyproject.toml
@@ -171,7 +173,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v5.1.2...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.2.0...master
+[v5.2.0]: https://github.com/nim65s/ndh/compare/v5.1.2...v5.2.0
 [v5.1.2]: https://github.com/nim65s/ndh/compare/v5.1.1...v5.1.2
 [v5.1.1]: https://github.com/nim65s/ndh/compare/v5.1.0...v5.1.1
 [v5.1.0]: https://github.com/nim65s/ndh/compare/v5.0.1...v5.1.0
