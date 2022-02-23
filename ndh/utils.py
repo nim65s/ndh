@@ -45,5 +45,5 @@ def get_env(env_file: str = ".env") -> None:
                     os.environ.setdefault(key.strip(), val.strip())
                 except ValueError:
                     pass
-    except FileNotFoundError:
+    except FileNotFoundError:  # pragma: no cover
         pass
