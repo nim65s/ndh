@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-23 18:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ndh/templates/ndh.html:29
+msgid "Log out"
+msgstr ""
+
+#: ndh/templates/ndh.html:33
+msgid "List"
+msgstr ""
+
+#: ndh/templates/ndh.html:36
+msgid "Item"
+msgstr ""
+
+#: ndh/templates/ndh.html:40
+#: ndh/templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: ndh/templates/ndh/base_delete.html:5
+msgid "Confirm deletion"
+msgstr ""
+
+#: ndh/templates/ndh/delete.html:5
+#, python-format
+msgid "Are you sure you want to delete%(object)s ?"
+msgstr ""
+
+#: ndh/templates/ndh/delete.html:6
+#: ndh/templates/registration/password_reset_complete.html:6
+msgid "Delete"
+msgstr ""
+
+#: ndh/templates/ndh/delete.html:7 ndh/templates/ndh/form.html:7
+msgid "Cancel"
+msgstr ""
+
+#: ndh/templates/ndh/form.html:6
+msgid "Confirm"
+msgstr ""
+
+#: ndh/templates/registration/logged_out.html:4
+msgid "You have been logged out successfully"
+msgstr ""
+
+#: ndh/templates/registration/login.html:7
+msgid "Reset Password"
+msgstr ""
+
+#: ndh/templates/registration/password_reset_complete.html:4
+msgid "Password changed"
+msgstr ""
+
+#: ndh/templates/registration/password_reset_complete.html:5
+msgid "Your password has been changed. You should be able to log in now"
+msgstr ""
+
+#: ndh/templates/registration/password_reset_confirm.html:8
+msgid "New password"
+msgstr ""
+
+#: ndh/templates/registration/password_reset_confirm.html:14
+msgid "Failure"
+msgstr ""
+
+#: ndh/templates/registration/password_reset_done.html:6
+msgid ""
+"You should receive shortly an e-mail with a link to change your password"
+msgstr ""
+
+#: ndh/templates/registration/password_reset_form.html:6
+msgid "Password reset"
+msgstr ""
