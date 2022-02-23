@@ -7,7 +7,7 @@ from django.db.models.functions import Coalesce
 
 import django_stubs_ext
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from django.db.models.manager import RelatedManager
 
 django_stubs_ext.monkeypatch()
