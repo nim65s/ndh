@@ -33,16 +33,20 @@ class Links:
         else:
             return reverse(f"{app}:{model}s")
 
-    def get_full_url(self) -> str:
-        """Get the protocol + domain + absolute_url."""
-        return full_url(self.get_absolute_url())
-
     def get_admin_url(self) -> str:
         """Get the admin url for an instance."""
         return reverse(
             f"admin:{self._meta.app_label}_{self._meta.model_name}_change",
             args=[self.id],
         )
+
+    def get_full_admin_url(self) -> str:
+        """Get the protocol + domain + admin_url."""
+        return full_url(self.get_admin_url())
+
+    def get_full_url(self) -> str:
+        """Get the protocol + domain + absolute_url."""
+        return full_url(self.get_absolute_url())
 
     def get_link(self) -> str:
         """Get the HTML link for this absolute_url."""
