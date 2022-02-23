@@ -45,6 +45,10 @@ class TestNDH(TestCase):
             instance.get_full_url(), f"https://example.com/test/{instance.slug}"
         )
         self.assertEqual(instance.get_admin_url(), "/admin/testapp/testmodel/1/change/")
+        self.assertEqual(
+            instance.get_full_admin_url(),
+            "https://example.com/admin/testapp/testmodel/1/change/",
+        )
 
         # test query_sum
         self.assertEqual(query_sum(TestModel.objects.all(), "tests"), 42)

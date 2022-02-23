@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- add Links.get_full_admin_url
+
 ## [v5.2.0] - 2022-02-23
 
 - fix typing for related manager
