@@ -7,6 +7,7 @@ from django.http import HttpRequest
 
 def settings_constants(request: HttpRequest) -> Dict[str, str]:
     """Set constants from settings to template contexts."""
+    ret = {}
     if hasattr(settings, "NDH_TEMPLATES_SETTINGS"):
-        return {key: getattr(settings, key) for key in settings.NDH_TEMPLATES_SETTINGS}
-    return {}
+        ret = {key: getattr(settings, key) for key in settings.NDH_TEMPLATES_SETTINGS}
+    return ret
