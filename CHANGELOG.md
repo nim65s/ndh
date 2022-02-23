@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- add Links.get_full_admin_url
+- add `Links.get_full_admin_url`
 
 ## [v5.2.0] - 2022-02-23
 
@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - yapf → black
 - move most tooling conf from setup.cfg to pyproject.toml
 - CI: check python 3.10
-- set __version__ / __version_tuple__ from release.sh
+- set `__version__` / `__version_tuple__` from release.sh
 
 ## [v5.1.2] - 2021-12-20
 
