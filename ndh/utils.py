@@ -1,6 +1,6 @@
 """General utils for NDH."""
 import os
-from typing import Optional, TypeVar
+from typing import Optional, TypeVar, Union
 
 from django.db import models
 from django.db.models.functions import Coalesce
@@ -18,7 +18,9 @@ def full_url(url: str = "", domain: str = None, protocol: str = "https") -> str:
 
 
 def query_sum(
-    queryset: models.QuerySet, field: str, output_field: Optional[models.Field] = None
+    queryset: Union[models.QuerySet, "RelatedManager"],
+    field: str,
+    output_field: Optional[models.Field] = None,
 ) -> Numeric:
     """Let the DBMS perform a sum on a queryset."""
     return queryset.aggregate(
