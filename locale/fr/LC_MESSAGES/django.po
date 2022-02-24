@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-23 18:31+0000\n"
+"POT-Creation-Date: 2022-02-24 10:07+0000\n"
 "PO-Revision-Date: 2022-02-24 11:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -71,7 +71,9 @@ msgstr "Mot de passe changé"
 
 #: ndh/templates/registration/password_reset_complete.html:5
 msgid "Your password has been changed. You should be able to log in now"
-msgstr "Votre mot de passe a été mis à jour. Vous devriez pouvoir vous connecter maintenant"
+msgstr ""
+"Votre mot de passe a été mis à jour. Vous devriez pouvoir vous connecter "
+"maintenant"
 
 #: ndh/templates/registration/password_reset_confirm.html:8
 msgid "New password"
@@ -81,8 +83,14 @@ msgstr "Nouveau mot de passe"
 msgid "Failure"
 msgstr "Échec"
 
+#: ndh/templates/registration/password_reset_confirm.html:16
+msgid ""
+"This link is invalid, probably because it has already been used. Try again !"
+msgstr ""
+
 #: ndh/templates/registration/password_reset_done.html:6
-msgid "You should receive shortly an e-mail with a link to change your password"
+msgid ""
+"You should receive shortly an e-mail with a link to change your password"
 msgstr "Vous devriez recevoir un mail"
 
 #: ndh/templates/registration/password_reset_form.html:6
