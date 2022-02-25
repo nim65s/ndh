@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- add pyupgrade
+
 ## [v5.3.0] - 2022-02-23
 
 - add `Links.get_full_admin_url`

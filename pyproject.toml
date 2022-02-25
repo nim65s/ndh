@@ -26,6 +26,7 @@ safety = "^1.10.3"
 Sphinx = "^3.5.3"
 types-setuptools = "^57.4.9"
 types-toml = "^0.10.4"
+pyupgrade = "^2.31.0"
 
 [tool.coverage.run]
 source = ["ndh"]

@@ -10,7 +10,7 @@ class SuperUserRequiredMixin(UserPassesTestMixin):
         return self.request.user.is_superuser
 
 
-class NDHFormMixin(object):
+class NDHFormMixin:
     """Mixin setting a default form template and title."""
 
     template_name = "ndh/base_form.html"
