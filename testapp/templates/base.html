@@ -1,11 +1,12 @@
 {% extends 'ndh.html' %}
-{% load ndh %}
+{% load ndh i18n %}
 
 {% block pagetitle %}Test Page Title{% endblock %}
 {% block sitetitle %}Test Site Title{% endblock %}
+
 {% block navbarleft %}
-{% navbar_item 'testapp:testmodels' 'List' %}
-{% navbar_item 'testapp:testmodel-add' 'Create' %}
+{% navbar_item 'testapp:testmodels' _('List') %}
+{% navbar_item 'testapp:testmodel-add' _('Create') %}
 {% endblock %}
 
 {% block content %}

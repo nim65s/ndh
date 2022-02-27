@@ -1,6 +1,6 @@
 {% load static i18n django_bootstrap5 ndh %}
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}">
+{% get_current_language as LANGUAGE_CODE %}<html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,19 +16,15 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
           <a class="navbar-brand" href="/" >{% block sitetitle %}NDH sitetitle block {% endblock%}</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              {% block navbarleft %}<li class="nav-item active"><a class="nav-link" href="#">NDH navbarleft block</a></li>{% endblock %}
-            </ul>
+          <ul class="navbar-nav">
+            {% block navbarleft %}<li class="nav-item active"><a class="nav-link" href="#">NDH navbarleft block</a></li>{% endblock %}
+          </ul>
+          <div class="d-flex">
             <ul class="navbar-nav">
               {% if request.user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">{% translate "Log out" %}</a></li>
                 {% if request.user.is_superuser %}
-                  <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">{% translate "Admin" %}</a></li>
                   {% if object_list %}
                   <li class="nav-item"><a class="nav-link" href="{{ object_list|admin_url }}">{% translate "List" %}</a></li>
                   {% endif %}
@@ -40,6 +36,15 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">{% translate "Log in" %}</a></li>
               {% endif %}
             </ul>
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+              {% if LANGUAGE_CODE == "fr" %}
+                <input name="language" type="hidden" value="en-us">
+                {% bootstrap_button "🇫🇷" button_type="submit" button_class="btn-dark" %}
+              {% else %}
+                <input name="language" type="hidden" value="fr">
+                {% bootstrap_button "🇺🇸" button_type="submit" button_class="btn-dark" %}
+              {% endif %}
+            </form>
           </div>
         </div>
       </nav>
