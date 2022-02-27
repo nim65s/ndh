@@ -36,15 +36,17 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">{% translate "Log in" %}</a></li>
               {% endif %}
             </ul>
-            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-              {% if LANGUAGE_CODE == "fr" %}
-                <input name="language" type="hidden" value="en-us">
-                {% bootstrap_button "🇫🇷" button_type="submit" button_class="btn-dark" %}
-              {% else %}
-                <input name="language" type="hidden" value="fr">
-                {% bootstrap_button "🇺🇸" button_type="submit" button_class="btn-dark" %}
-              {% endif %}
-            </form>
+            {% block translations %}
+              <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                {% if LANGUAGE_CODE == "fr" %}
+                  <input name="language" type="hidden" value="en-us">
+                  {% bootstrap_button "🇫🇷" button_type="submit" button_class="btn-dark" %}
+                {% else %}
+                  <input name="language" type="hidden" value="fr">
+                  {% bootstrap_button "🇺🇸" button_type="submit" button_class="btn-dark" %}
+                {% endif %}
+              </form>
+            {% endblock %}
           </div>
         </div>
       </nav>

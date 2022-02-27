@@ -17,4 +17,4 @@
 
 ## Install
 
-`pip install ndh`
+`python -m pip install ndh`
