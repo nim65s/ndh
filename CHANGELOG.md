@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix missing load i18n in templates
+
 ## [v5.4.1] - 2022-02-28
 
 ## [v5.4.0] - 2022-02-28
