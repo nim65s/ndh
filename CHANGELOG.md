@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- templates: add formset & tables over `django_tables2/bootstrap4.html` for pagination
+- style: bigger buttons
+
 ## [v5.4.2] - 2022-02-28
 
 - fix missing load i18n in templates
