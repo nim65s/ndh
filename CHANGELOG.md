@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.5.1] - 2022-03-12
+
 - typo
 - model fields translations
 
@@ -196,7 +198,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v5.5.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.5.1...master
+[v5.5.1]: https://github.com/nim65s/ndh/compare/v5.5.0...v5.5.1
 [v5.5.0]: https://github.com/nim65s/ndh/compare/v5.4.2...v5.5.0
 [v5.4.2]: https://github.com/nim65s/ndh/compare/v5.4.1...v5.4.2
 [v5.4.1]: https://github.com/nim65s/ndh/compare/v5.4.0...v5.4.1
