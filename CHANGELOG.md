@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- typo
+
 ## [v5.5.0] - 2022-03-11
 
 - templates: add formset & tables over `django_tables2/bootstrap4.html` for pagination
