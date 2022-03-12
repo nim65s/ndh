@@ -4,6 +4,7 @@ from typing import Any
 from django.db import models
 from django.urls import reverse
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 
 from autoslug import AutoSlugField  # type: ignore
 
@@ -56,8 +57,8 @@ class Links:
 class TimeStampedModel(models.Model):
     """Mixin to timestamp a model."""
 
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True, verbose_name=_("created"))
+    updated = models.DateTimeField(auto_now=True, verbose_name=_("updated"))
 
     class Meta:
         """Meta."""
@@ -68,7 +69,7 @@ class TimeStampedModel(models.Model):
 class NamedModel(models.Model):
     """Mixin to name and slugify a model."""
 
-    name = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=200, unique=True, verbose_name=_("name"))
     slug = AutoSlugField(populate_from="name", unique=True)
 
     objects = NameOrderedQuerySet.as_manager()

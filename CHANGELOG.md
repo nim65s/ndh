@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - typo
+- model fields translations
 
 ## [v5.5.0] - 2022-03-11
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 00:47+0100\n"
+"POT-Creation-Date: 2022-03-12 04:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,90 +18,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: templates/ndh.html:24
+#: ndh/models.py:60
+#, fuzzy
+#| msgid "Create"
+msgid "created"
+msgstr "Créer"
+
+#: ndh/models.py:61
+msgid "updated"
+msgstr "mis à jour"
+
+#: ndh/models.py:72
+msgid "name"
+msgstr "nom"
+
+#: ndh/templates/ndh.html:25
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: templates/ndh.html:26
+#: ndh/templates/ndh.html:27
 msgid "Admin"
 msgstr "Administration"
 
-#: templates/ndh.html:28
+#: ndh/templates/ndh.html:29
 msgid "List"
 msgstr "Liste"
 
-#: templates/ndh.html:31
+#: ndh/templates/ndh.html:32
 msgid "Item"
 msgstr "Objet"
 
-#: templates/ndh.html:35 templates/registration/password_reset_complete.html:8
+#: ndh/templates/ndh.html:36
+#: ndh/templates/registration/password_reset_complete.html:9
 msgid "Log in"
 msgstr "Se connecter"
 
-#: templates/ndh/base_delete.html:6
+#: ndh/templates/ndh/base_delete.html:6
 msgid "Confirm deletion"
 msgstr "Confirmation avant suppression"
 
-#: templates/ndh/delete.html:5
+#: ndh/templates/ndh/delete.html:5
 #, python-format
 msgid "Are you sure you want to delete%(object)s ?"
 msgstr "Êtes-vous sûr de vouloir supprimer %(object)s ?"
 
-#: templates/ndh/delete.html:7
-#: templates/registration/password_reset_complete.html:6
+#: ndh/templates/ndh/delete.html:7
+#: ndh/templates/registration/password_reset_complete.html:8
 msgid "Delete"
 msgstr "Supprimer"
 
-#: templates/ndh/delete.html:8 templates/ndh/form.html:7
+#: ndh/templates/ndh/delete.html:8 ndh/templates/ndh/form.html:8
+#: ndh/templates/ndh/formset.html:8
 msgid "Cancel"
 msgstr "Annuler"
 
-#: templates/ndh/form.html:6
+#: ndh/templates/ndh/form.html:7 ndh/templates/ndh/formset.html:7
 msgid "Confirm"
 msgstr "Valider"
 
-#: templates/registration/logged_out.html:4
+#: ndh/templates/registration/logged_out.html:5
 msgid "You have been logged out successfully"
 msgstr "Vous avez été déconnecté avec succès"
 
-#: templates/registration/login.html:8
+#: ndh/templates/registration/login.html:8
 msgid "Reset Password"
 msgstr "Réinitialisation du mot de passe"
 
-#: templates/registration/password_reset_complete.html:4
+#: ndh/templates/registration/password_reset_complete.html:5
 msgid "Password changed"
 msgstr "Mot de passe changé"
 
-#: templates/registration/password_reset_complete.html:5
+#: ndh/templates/registration/password_reset_complete.html:6
 msgid "Your password has been changed. You should be able to log in now"
 msgstr ""
 "Votre mot de passe a été mis à jour. Vous devriez pouvoir vous connecter "
 "maintenant"
 
-#: templates/registration/password_reset_confirm.html:8
+#: ndh/templates/registration/password_reset_confirm.html:8
 msgid "New password"
 msgstr "Nouveau mot de passe"
 
-#: templates/registration/password_reset_confirm.html:14
+#: ndh/templates/registration/password_reset_confirm.html:14
 msgid "Failure"
 msgstr "Échec"
 
-#: templates/registration/password_reset_confirm.html:16
+#: ndh/templates/registration/password_reset_confirm.html:16
 msgid ""
 "This link is invalid, probably because it has already been used. Try again !"
 msgstr ""
 "Ce lien est invalide, probablement parce qu’il a déjà été utilisé. Essayez "
 "encore!"
 
-#: templates/registration/password_reset_done.html:6
+#: ndh/templates/registration/password_reset_done.html:6
+msgid "mail sent"
+msgstr "email envoyé"
+
+#: ndh/templates/registration/password_reset_done.html:7
 msgid ""
 "You should receive shortly an e-mail with a link to change your password"
 msgstr "Vous devriez recevoir un mail"
 
-#: templates/registration/password_reset_form.html:6
+#: ndh/templates/registration/password_reset_form.html:6
 msgid "Password reset"
 msgstr "Changement de mot de passe"
-
-#: testapp/templates/base.html:9
-msgid "Create"
-msgstr "Créer"
