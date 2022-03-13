@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- extraneous block in registration
+
 ## [v5.5.2] - 2022-03-13
 
 - missing load in registration
