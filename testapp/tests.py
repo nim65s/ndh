@@ -70,7 +70,8 @@ class TestNDH(TestCase):
         """Test ndh.templatetags."""
         r = self.client.get(reverse("test"))
         self.assertEqual(r.status_code, 200)
-        mail = '<span class="mail">test<span class="at"></span>example<span class="dot"></span>org</span>'
+        mail = '<span class="mail">test<span class="at">'
+        mail += '</span>example<span class="dot"></span>org</span>'
         self.assertIn(mail, r.content.decode())
 
         User.objects.create_user(username="test", password="test")
@@ -78,7 +79,8 @@ class TestNDH(TestCase):
 
         r = self.client.get(reverse("test"))
         self.assertEqual(r.status_code, 200)
-        mail = '<span class="mail"><a href="mailto:test@example.org">test@example.org</a></span>'
+        mail = '<span class="mail">'
+        mail += '<a href="mailto:test@example.org">test@example.org</a></span>'
         self.assertIn(mail, r.content.decode())
 
         User.objects.create_user(username="super", password="super", is_superuser=True)
@@ -97,8 +99,10 @@ class TestNDH(TestCase):
         self.assertIn(
             "\n".join(
                 [
-                    '<li class="nav-item active"><a class="nav-link" href="/test/">List</a></li>',
-                    '<li class="nav-item "><a class="nav-link" href="/test/create">Create</a></li>',
+                    '<li class="nav-item active">'
+                    '<a class="nav-link" href="/test/">List</a></li>',
+                    '<li class="nav-item ">'
+                    '<a class="nav-link" href="/test/create">Create</a></li>',
                 ]
             ),
             r.content.decode(),
@@ -107,8 +111,10 @@ class TestNDH(TestCase):
         self.assertIn(
             "\n".join(
                 [
-                    '<li class="nav-item "><a class="nav-link" href="/test/">List</a></li>',
-                    '<li class="nav-item active"><a class="nav-link" href="/test/create">Create</a></li>',
+                    '<li class="nav-item ">'
+                    '<a class="nav-link" href="/test/">List</a></li>',
+                    '<li class="nav-item active">'
+                    '<a class="nav-link" href="/test/create">Create</a></li>',
                 ]
             ),
             r.content.decode(),

@@ -12,7 +12,7 @@ Numeric = TypeVar("Numeric", int, float)
 
 
 def full_url(url: str = "", domain: str = None, protocol: str = "https") -> str:
-    """Prepend protocol (default to https) and domain name (default from the Site framework) to an url."""
+    """Prepend protocol and domain name to an url."""
     if domain is None:
         from django.contrib.sites.models import Site
 

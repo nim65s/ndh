@@ -34,9 +34,10 @@ def admin_url(obj) -> str:
 
 @register.simple_tag(takes_context=True)
 def navbar_item(context, view_name: str, link: str) -> str:
-    """Get a navbar item for a view, activated if its url is in the current request path."""
+    """Get a navbar item, activated if its url is in the current request path."""
     url = reverse(view_name)
     active = "active" if url == context.request.path else ""
     return mark_safe(
-        f'<li class="nav-item {active}"><a class="nav-link" href="{url}">{link}</a></li>'
+        f'<li class="nav-item {active}">'
+        f'<a class="nav-link" href="{url}">{link}</a></li>'
     )
