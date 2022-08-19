@@ -27,6 +27,9 @@ def admin_url(obj) -> str:
     if isinstance(obj, QuerySet):  # type: ignore
         obj = obj[0]._meta
         return reverse(f"admin:{obj.app_label}_{obj.model_name}_changelist")
+    elif hasattr(obj, "_queryset_class"):
+        obj = obj.first()._meta
+        return reverse(f"admin:{obj.app_label}_{obj.model_name}_changelist")
     return reverse(
         f"admin:{obj._meta.app_label}_{obj._meta.model_name}_change", args=[obj.pk]
     )
