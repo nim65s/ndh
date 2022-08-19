@@ -18,7 +18,7 @@ black = "^22.6.0"
 coverage = {extras = ["toml"], version = "^6.3.2"}
 django-stubs = "^1.9.0"
 flake8 = "^3.9.2"
-mypy = "^0.971"
+#mypy = "^0.971"
 myst-parser = "^0.15.1"
 pre-commit = "^2.11.1"
 pydocstyle = {extras = ["toml"], version = "^6.1.1"}
@@ -38,8 +38,8 @@ omit = ["*/migrations/*", "*/wsgi.py", "*/apps.py"]
 [tool.django-stubs]
 django_settings_module = "testproject.settings"
 
-[tool.mypy]
-plugins = ["mypy_django_plugin.main"]
+#[tool.mypy]
+#plugins = ["mypy_django_plugin.main"]
 
 [tool.pydocstyle]
 ignore = "D203,D204"  # https://github.com/google/yapf/issues/744
