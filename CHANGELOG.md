@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.5.5] - 2022-08-19
+
 - Allow `ManyRelatedManager` in `Links`
 - Remove mypy
 
@@ -215,7 +217,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v5.5.4...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.5.5...master
+[v5.5.5]: https://github.com/nim65s/ndh/compare/v5.5.4...v5.5.5
 [v5.5.4]: https://github.com/nim65s/ndh/compare/v5.5.3...v5.5.4
 [v5.5.3]: https://github.com/nim65s/ndh/compare/v5.5.2...v5.5.3
 [v5.5.2]: https://github.com/nim65s/ndh/compare/v5.5.1...v5.5.2
