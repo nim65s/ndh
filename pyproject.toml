@@ -7,6 +7,10 @@ license = "BSD-2-Clause"
 readme = "README.md"
 homepage = "https://github.com/nim65s/ndh"
 repository = "https://github.com/nim65s/ndh.git"
+documentation = "https://ndh.readthedocs.io/"
+
+[tool.poetry.urls]
+changelog = "https://github.com/nim65s/ndh/blob/master/CHANGELOG.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
