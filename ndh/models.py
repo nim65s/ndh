@@ -53,6 +53,10 @@ class Links:
         """Get the HTML link for this absolute_url."""
         return mark_safe(f'<a href="{self.get_absolute_url()}">{self}</a>')
 
+    def get_md_link(self) -> str:
+        """Get the Markdown link for this absolute_url."""
+        return mark_safe(f"[{self}]({self.get_absolute_url()})")
+
 
 class TimeStampedModel(models.Model):
     """Mixin to timestamp a model."""

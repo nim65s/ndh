@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- added `Links.get_md_link`
+
 ## [v5.5.5] - 2022-08-19
 
 - Allow `ManyRelatedManager` in `Links`
