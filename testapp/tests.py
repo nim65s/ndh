@@ -37,7 +37,9 @@ class TestNDH(TestCase):
         self.assertLess(almost_zero, instance.updated - instance.created)
 
         # test links
+        FULL = "https://example.com"
         self.assertEqual(instance.get_absolute_url(), f"/test/{instance.slug}")
+        self.assertEqual(instance.get_full_url(), f"{FULL}/test/{instance.slug}")
         self.assertEqual(
             str(instance.get_link()), f'<a href="/test/{instance.slug}">{instance}</a>'
         )
@@ -45,12 +47,17 @@ class TestNDH(TestCase):
             str(instance.get_md_link()), f"[{instance}](/test/{instance.slug})"
         )
         self.assertEqual(
-            instance.get_full_url(), f"https://example.com/test/{instance.slug}"
+            str(instance.get_full_link()),
+            f'<a href="{FULL}/test/{instance.slug}">{instance}</a>',
+        )
+        self.assertEqual(
+            str(instance.get_full_md_link()),
+            f"[{instance}]({FULL}/test/{instance.slug})",
         )
         self.assertEqual(instance.get_admin_url(), "/admin/testapp/testmodel/1/change/")
         self.assertEqual(
             instance.get_full_admin_url(),
-            "https://example.com/admin/testapp/testmodel/1/change/",
+            f"{FULL}/admin/testapp/testmodel/1/change/",
         )
 
         # test query_sum
