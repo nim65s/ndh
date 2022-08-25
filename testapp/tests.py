@@ -42,6 +42,9 @@ class TestNDH(TestCase):
             str(instance.get_link()), f'<a href="/test/{instance.slug}">{instance}</a>'
         )
         self.assertEqual(
+            str(instance.get_md_link()), f"[{instance}](/test/{instance.slug})"
+        )
+        self.assertEqual(
             instance.get_full_url(), f"https://example.com/test/{instance.slug}"
         )
         self.assertEqual(instance.get_admin_url(), "/admin/testapp/testmodel/1/change/")
