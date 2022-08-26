@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 11:35+0000\n"
+"POT-Creation-Date: 2022-08-26 11:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,16 +67,17 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #: ndh/templates/ndh/delete.html:8 ndh/templates/ndh/form.html:10
-#: ndh/templates/ndh/form.html:13 ndh/templates/ndh/formset.html:8
+#: ndh/templates/ndh/form.html:13 ndh/templates/ndh/formset.html:10
+#: ndh/templates/ndh/formset.html:13
 msgid "Cancel"
 msgstr "Annuler"
 
 #: ndh/templates/ndh/form.html:8 ndh/templates/ndh/form.html:12
-#: ndh/templates/ndh/formset.html:7
+#: ndh/templates/ndh/formset.html:8 ndh/templates/ndh/formset.html:12
 msgid "Confirm"
 msgstr "Valider"
 
-#: ndh/templates/ndh/form.html:9
+#: ndh/templates/ndh/form.html:9 ndh/templates/ndh/formset.html:9
 msgid "Confirm and Continue"
 msgstr "Valider et Continuer"
 

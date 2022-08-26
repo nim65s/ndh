@@ -9,8 +9,8 @@
     <button class="btn btn-primary w-25 mx-auto py-3" type="submit" formaction="?continue_edit">{% translate "Confirm and Continue" %}</button>
     <a class="btn btn-danger w-25 mx-auto py-3" href="javascript:history.back()" role="button">{% translate "Cancel" %}</a>
     {% else %}
-      {% bootstrap_button _("Confirm") button_class="btn-success" button_type="submit" extra_classes="w-25 mx-auto py-3" %}
-      {% bootstrap_button _("Cancel") button_class="btn-danger" href="javascript:history.back()" extra_classes="w-25 mx-auto py-3" %}
+    {% bootstrap_button _("Confirm") button_class="btn-success" button_type="submit" extra_classes="w-25 mx-auto py-3" %}
+    {% bootstrap_button _("Cancel") button_class="btn-danger" href="javascript:history.back()" extra_classes="w-25 mx-auto py-3" %}
     {% endif %}
   </div>
 </form>

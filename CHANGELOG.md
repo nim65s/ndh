@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- implement `NDHFormMixin.continue_edit` for formsets
+
 ## [v5.7.0] - 2022-08-26
 
 - added `NDHFormMixin.continue_edit`
