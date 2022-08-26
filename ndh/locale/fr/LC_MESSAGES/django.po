@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 04:55+0000\n"
+"POT-Creation-Date: 2022-08-26 11:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ndh/models.py:60
+#: ndh/models.py:72
 #, fuzzy
 #| msgid "Create"
 msgid "created"
 msgstr "Créer"
 
-#: ndh/models.py:61
+#: ndh/models.py:73
 msgid "updated"
 msgstr "mis à jour"
 
-#: ndh/models.py:72
+#: ndh/models.py:84
 msgid "name"
 msgstr "nom"
 
@@ -49,7 +49,7 @@ msgid "Item"
 msgstr "Objet"
 
 #: ndh/templates/ndh.html:36
-#: ndh/templates/registration/password_reset_complete.html:9
+#: ndh/templates/registration/password_reset_complete.html:8
 msgid "Log in"
 msgstr "Se connecter"
 
@@ -63,16 +63,15 @@ msgid "Are you sure you want to delete%(object)s ?"
 msgstr "Êtes-vous sûr de vouloir supprimer %(object)s ?"
 
 #: ndh/templates/ndh/delete.html:7
-#: ndh/templates/registration/password_reset_complete.html:8
 msgid "Delete"
 msgstr "Supprimer"
 
-#: ndh/templates/ndh/delete.html:8 ndh/templates/ndh/form.html:8
+#: ndh/templates/ndh/delete.html:8 ndh/templates/ndh/form.html:13
 #: ndh/templates/ndh/formset.html:8
 msgid "Cancel"
 msgstr "Annuler"
 
-#: ndh/templates/ndh/form.html:7 ndh/templates/ndh/formset.html:7
+#: ndh/templates/ndh/form.html:12 ndh/templates/ndh/formset.html:7
 msgid "Confirm"
 msgstr "Valider"
 
