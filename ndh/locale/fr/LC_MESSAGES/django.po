@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 11:32+0000\n"
+"POT-Creation-Date: 2022-08-26 11:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,14 +66,19 @@ msgstr "Êtes-vous sûr de vouloir supprimer %(object)s ?"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: ndh/templates/ndh/delete.html:8 ndh/templates/ndh/form.html:13
-#: ndh/templates/ndh/formset.html:8
+#: ndh/templates/ndh/delete.html:8 ndh/templates/ndh/form.html:10
+#: ndh/templates/ndh/form.html:13 ndh/templates/ndh/formset.html:8
 msgid "Cancel"
 msgstr "Annuler"
 
-#: ndh/templates/ndh/form.html:12 ndh/templates/ndh/formset.html:7
+#: ndh/templates/ndh/form.html:8 ndh/templates/ndh/form.html:12
+#: ndh/templates/ndh/formset.html:7
 msgid "Confirm"
 msgstr "Valider"
+
+#: ndh/templates/ndh/form.html:9
+msgid "Confirm and Continue"
+msgstr "Valider et Continuer"
 
 #: ndh/templates/registration/logged_out.html:5
 msgid "You have been logged out successfully"
