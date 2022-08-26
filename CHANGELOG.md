@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- added `NDHFormMixin.continue_edit`
+
 ## [v5.6.0] - 2022-08-25
 
 - added `Links.get_md_link`

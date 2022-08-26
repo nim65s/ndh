@@ -6,5 +6,6 @@
     <td>{{ object.get_year_in_school_display }}</td>
     <td>{{ object.tests }}</td>
     <td>{{ object.moment }}</td>
+    <td><a href="{% url 'testapp:testmodel-update' object.slug %}">update</a></td>
     <td><a href="{% url 'testapp:testmodel-del' object.slug %}">delete</a></td>
   </tr>

@@ -1,6 +1,6 @@
 """Views for testapp."""
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DeleteView
+from django.views.generic import CreateView, DeleteView, UpdateView
 
 from ndh.mixins import NDHDeleteMixin, NDHFormMixin, SuperUserRequiredMixin
 
@@ -14,6 +14,15 @@ class TestCreateView(NDHFormMixin, CreateView):
     model = TestModel
     form_class = TestForm
     title = "Create Test"
+
+
+class TestUpdateView(NDHFormMixin, UpdateView):
+    """View to test NDHFormMixin continue_edit."""
+
+    model = TestModel
+    form_class = TestForm
+    title = "Update Test"
+    continue_edit = True
 
 
 class TestDeleteView(NDHDeleteMixin, SuperUserRequiredMixin, DeleteView):

@@ -15,10 +15,19 @@ class NDHFormMixin:
 
     template_name = "ndh/base_form.html"
     title = ""
+    continue_edit = False
 
     def get_context_data(self, **kwargs):
         """Add title to the context."""
-        return super().get_context_data(title=self.title, **kwargs)
+        return super().get_context_data(
+            title=self.title, continue_edit=self.continue_edit, **kwargs
+        )
+
+    def get_success_url(self):
+        """Redirect to current page if continue_edit."""
+        if self.continue_edit and "continue_edit" in self.request.GET:
+            return self.request.path
+        super().get_success_url()
 
 
 class NDHDeleteMixin(NDHFormMixin):

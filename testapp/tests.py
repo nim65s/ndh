@@ -222,3 +222,23 @@ class TestNDH(TestCase):
             self.assertIn(
                 "UTC", self.client.get(reverse("testapp:settings")).content.decode()
             )
+
+    def test_continue_edit(self):
+        """Test NDHFormMixin.continue_edit."""
+        TestModel.objects.create(name="a", moment=timezone.now())
+        url = reverse("testapp:testmodel-update", kwargs={"slug": "a"})
+        data = {
+            "name": "a",
+            "tests": 314,
+            "moment_0": "2017-12-06",
+            "moment_1": "03:19:45",
+        }
+        r = self.client.post(url, data)
+        self.assertEqual(TestModel.objects.first().tests, 314)
+        self.assertEqual(r.status_code, 302)
+        self.assertEqual(r.url, "None")
+        data["tests"] = 420
+        r = self.client.post(f"{url}?continue_edit", data)
+        self.assertEqual(TestModel.objects.first().tests, 420)
+        self.assertEqual(r.status_code, 302)
+        self.assertEqual(r.url, url)
