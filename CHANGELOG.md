@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.7.0] - 2022-08-26
+
 - added `NDHFormMixin.continue_edit`
 
 ## [v5.6.0] - 2022-08-25
@@ -225,7 +227,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v5.6.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.7.0...master
+[v5.7.0]: https://github.com/nim65s/ndh/compare/v5.6.0...v5.7.0
 [v5.6.0]: https://github.com/nim65s/ndh/compare/v5.5.5...v5.6.0
 [v5.5.5]: https://github.com/nim65s/ndh/compare/v5.5.4...v5.5.5
 [v5.5.4]: https://github.com/nim65s/ndh/compare/v5.5.3...v5.5.4
