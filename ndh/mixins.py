@@ -27,7 +27,7 @@ class NDHFormMixin:
         """Redirect to current page if continue_edit."""
         if self.continue_edit and "continue_edit" in self.request.GET:
             return self.request.path
-        super().get_success_url()
+        return super().get_success_url()
 
 
 class NDHDeleteMixin(NDHFormMixin):

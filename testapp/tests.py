@@ -236,7 +236,7 @@ class TestNDH(TestCase):
         r = self.client.post(url, data)
         self.assertEqual(TestModel.objects.first().tests, 314)
         self.assertEqual(r.status_code, 302)
-        self.assertEqual(r.url, "None")
+        self.assertEqual(r.url, "/test/a")
         data["tests"] = 420
         r = self.client.post(f"{url}?continue_edit", data)
         self.assertEqual(TestModel.objects.first().tests, 420)

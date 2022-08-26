@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix `NDHFormMixin.get_success_url`
+
 ## [v5.7.1] - 2022-08-26
 
 - implement `NDHFormMixin.continue_edit` for formsets
