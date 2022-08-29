@@ -140,6 +140,7 @@ class TestNDH(TestCase):
             "tests": 3,
             "moment_0": "2017-12-06",
             "moment_1": "03:19:45",
+            "datalist": "toto",
         }
         r = self.client.post(reverse("testapp:testmodel-add"), data)
 
@@ -232,6 +233,7 @@ class TestNDH(TestCase):
             "tests": 314,
             "moment_0": "2017-12-06",
             "moment_1": "03:19:45",
+            "datalist": "toto",
         }
         r = self.client.post(url, data)
         self.assertEqual(TestModel.objects.first().tests, 314)

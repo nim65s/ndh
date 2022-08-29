@@ -10,6 +10,7 @@ class TestModel(Links, TimeStampedModel, NamedModel):
     tests = models.IntegerField(default=42)
     tests_decimal = models.DecimalField(default=3.14, max_digits=5, decimal_places=2)
     moment = models.DateTimeField()
+    datalist = models.CharField(max_length=30)
 
 
 class TestModelList(TestModel):
