@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- update bootstrap to 5.2.1
+- update django-bootstrap5 to 22.1
+
 ## [v5.8.0] - 2022-08-30
 
 - add datalist support
