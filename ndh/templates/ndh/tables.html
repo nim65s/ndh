@@ -2,7 +2,9 @@
 {% load django_bootstrap5 %}
 
 {% block pagination %}
+{% if table.page %}
 <div class="d-flex justify-content-center">
   {% bootstrap_pagination table.page extra=request.GET.urlencode size="lg" %}
 </div>
+{% endif %}
 {% endblock %}

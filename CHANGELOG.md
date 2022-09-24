@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix tables template for non paginated ones
+
 ## [v5.8.1] - 2022-09-08
 
 - update bootstrap to 5.2.1
