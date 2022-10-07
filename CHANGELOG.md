@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- add `ndh_form_action` variable in `ndh/form.html`
+
 ## [v5.8.2] - 2022-09-24
 
 - fix tables template for non paginated ones

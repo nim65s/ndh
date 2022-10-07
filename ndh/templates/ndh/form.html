@@ -1,6 +1,6 @@
 {% load django_bootstrap5 i18n %}
 
-<form method="post" action="" class="form-horizontal" role="form">
+<form method="post" action="{{ ndh_form_action }}" class="form-horizontal" role="form">
   {% csrf_token %}
   {% bootstrap_form form layout="horizontal" %}
   <div class="d-flex align-items-center my-3">
