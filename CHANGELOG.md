@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- clarify delete.html
+
 ## [v5.9.0] - 2022-10-07
 
 - add `ndh_form_action` variable in `ndh/form.html`

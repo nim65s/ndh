@@ -2,7 +2,7 @@
 
 <form method="post" action="" class="form-horizontal" role="form">
   {% csrf_token %}
-  <p class="text-center">{% blocktranslate %}Are you sure you want to delete {{ object }} ?{% endblocktranslate %}</p>
+  <p class="text-center">{% blocktranslate %}Are you sure you want to delete "{{ object }}" ?{% endblocktranslate %}</p>
   <p class="text-center">
     {% bootstrap_button _("Delete") button_class="btn-warning" button_type="submit" %}
     {% bootstrap_button _("Cancel") button_class="btn-info" href="javascript:history.back()" %}
