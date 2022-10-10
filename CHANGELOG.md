@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- add `templates/ndh/dt.html` to represent a datetime
+
 ## [v5.9.1] - 2022-10-10
 
 - clarify delete.html
