@@ -111,9 +111,9 @@ class TestNDH(TestCase):
         self.assertIn(
             "\n".join(
                 [
-                    '<li class="nav-item active">'
+                    '<li class="nav-item me-auto active">'
                     '<a class="nav-link" href="/test/">List</a></li>',
-                    '<li class="nav-item ">'
+                    '<li class="nav-item me-auto ">'
                     '<a class="nav-link" href="/test/create">Create</a></li>',
                 ]
             ),
@@ -123,9 +123,9 @@ class TestNDH(TestCase):
         self.assertIn(
             "\n".join(
                 [
-                    '<li class="nav-item ">'
+                    '<li class="nav-item me-auto ">'
                     '<a class="nav-link" href="/test/">List</a></li>',
-                    '<li class="nav-item active">'
+                    '<li class="nav-item me-auto active">'
                     '<a class="nav-link" href="/test/create">Create</a></li>',
                 ]
             ),

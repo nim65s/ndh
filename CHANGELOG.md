@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- update unit tests
+
 ## [v5.11.2] - 2022-10-16
 
 - navbar with more flex and less floats
