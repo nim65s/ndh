@@ -44,3 +44,12 @@ def navbar_item(context, view_name: str, link: str) -> str:
         f'<li class="nav-item {active}">'
         f'<a class="nav-link" href="{url}">{link}</a></li>'
     )
+
+
+@register.filter
+def user_smcp(user):
+    """Get user's capitalized `first_name` + capitalized & small-capsed `last_name`."""
+    return mark_safe(
+        f"{user.first_name.capitalize()} "
+        f'<span class="smcp">{user.last_name.capitalize()}</span>'
+    )

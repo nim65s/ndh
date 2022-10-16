@@ -1,4 +1,5 @@
 """Define URLs for the test app."""
+from django.contrib.auth.models import User
 from django.urls import path
 from django.views.generic import DetailView, ListView, TemplateView
 
@@ -12,6 +13,7 @@ urlpatterns = [
     path("", ListView.as_view(model=TestModel), name="testmodels"),
     path("create", views.TestCreateView.as_view(), name="testmodel-add"),
     path("list", ListView.as_view(model=TestModelList), name="testmodellists"),
+    path("user/<int:pk>", DetailView.as_view(model=User), name="user"),
     path("pk/<int:pk>", DetailView.as_view(model=TestModelPK), name="testmodelpk"),
     path(
         "settings",

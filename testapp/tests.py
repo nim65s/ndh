@@ -84,7 +84,9 @@ class TestNDH(TestCase):
         mail += '</span>example<span class="dot"></span>org</span>'
         self.assertIn(mail, r.content.decode())
 
-        User.objects.create_user(username="test", password="test")
+        User.objects.create_user(
+            username="test", password="test", first_name="test", last_name="test"
+        )
         self.client.login(username="test", password="test")
 
         r = self.client.get(reverse("test"))
@@ -129,6 +131,9 @@ class TestNDH(TestCase):
             ),
             r.content.decode(),
         )
+        url = reverse("testapp:user", kwargs={"pk": User.objects.first().pk})
+        r = self.client.get(url)
+        self.assertIn('Test <span class="smcp">Test</span>', r.content.decode())
 
     def test_views(self):
         """Test testapp.views."""

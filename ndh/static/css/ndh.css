@@ -5,3 +5,9 @@
 .mail:after { content: '>'; }
 .mail:before { content: '<'; }
 dt { text-align: right; }
+.smcp {
+  -moz-font-feature-settings: 'smcp';
+  -webkit-font-feature-settings: 'smcp';
+  -o-font-feature-settings: 'smcp';
+  font-feature-settings: 'smcp';
+}
