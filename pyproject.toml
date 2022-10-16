@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ndh"
-version = "5.10.0"
+version = "5.11.0"
 description = "Nim's Django Helpers"
 authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
 license = "BSD-2-Clause"
