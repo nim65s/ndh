@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix navbar responsiveness
+
 ## [v5.11.0] - 2022-10-16
 
 - add template tags to docs
