@@ -43,6 +43,14 @@
 ```
 
 
+## Template Tags
+
+```{eval-rst}
+.. automodule:: ndh.templatetags.ndh
+   :members:
+```
+
+
 ## Utils
 
 ```{eval-rst}

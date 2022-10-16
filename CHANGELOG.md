@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- add template tags to docs
 - add `user_smcp` filter, for capitalized `first_name` + capitalized & small-capsed `last_name`
 
 ## [v5.10.0] - 2022-10-11
