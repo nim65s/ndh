@@ -35,26 +35,26 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <ul class="navbar-nav float-start">
-              {% block navbarleft %}<li class="nav-item active"><a class="nav-link" href="#">NDH navbarleft block</a></li>{% endblock %}
-            </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <ul class="navbar-nav">
+                {% block navbarleft %}<li class="nav-item me-auto active"><a class="nav-link" href="#">NDH navbarleft block</a></li>{% endblock %}
+              </ul>
 
-            <div class="d-flex text-end float-end">
               <ul class="navbar-nav">
                 {% if request.user.is_authenticated %}
-                  <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">{% translate "Log out" %}</a></li>
+                  <li class="nav-item ms-auto"><a class="nav-link" href="{% url 'logout' %}">{% translate "Log out" %}</a></li>
                   {% if request.user.is_superuser %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">{% translate "Admin" %}</a></li>
+                    <li class="nav-item ms-auto"><a class="nav-link" href="{% url 'admin:index' %}">{% translate "Admin" %}</a></li>
                     {% if object_list %}
-                    <li class="nav-item"><a class="nav-link" href="{{ object_list|admin_url }}">{% translate "List" %}</a></li>
+                    <li class="nav-item ms-auto"><a class="nav-link" href="{{ object_list|admin_url }}">{% translate "List" %}</a></li>
                     {% endif %}
                     {% if object %}
-                    <li class="nav-item"><a class="nav-link" href="{{ object|admin_url }}">{% translate "Item" %}</a></li>
+                    <li class="nav-item ms-auto"><a class="nav-link" href="{{ object|admin_url }}">{% translate "Item" %}</a></li>
                     {% endif %}
                   {% endif %}
                 {% else %}
-                  <li class="nav-item"><a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">{% translate "Log in" %}</a></li>
+                  <li class="nav-item ms-auto"><a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">{% translate "Log in" %}</a></li>
                 {% endif %}
               </ul>
             </div>

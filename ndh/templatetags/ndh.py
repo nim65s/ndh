@@ -41,7 +41,7 @@ def navbar_item(context, view_name: str, link: str) -> str:
     url = reverse(view_name)
     active = "active" if url == context.request.path else ""
     return mark_safe(
-        f'<li class="nav-item {active}">'
+        f'<li class="nav-item me-auto {active}">'
         f'<a class="nav-link" href="{url}">{link}</a></li>'
     )
 
