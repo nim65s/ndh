@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v5.12.0] - 2023-02-02
+
 - `utils.get_env()` works in main dir or subdir, for use in `manage.py`, `wsgi.py` and `asgi.py`
 - `utils.get_env()` discard lines starting with `#`
 
@@ -288,7 +290,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v5.11.3...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v5.12.0...master
+[v5.12.0]: https://github.com/nim65s/ndh/compare/v5.11.3...v5.12.0
 [v5.11.3]: https://github.com/nim65s/ndh/compare/v5.11.2...v5.11.3
 [v5.11.2]: https://github.com/nim65s/ndh/compare/v5.11.1...v5.11.2
 [v5.11.1]: https://github.com/nim65s/ndh/compare/v5.11.0...v5.11.1
