@@ -34,19 +34,21 @@ def query_sum(
 
 def get_env(env_file: str = ".env") -> None:
     """Set default environment variables from .env file."""
+
     def load_env(path: Path):
         with path.open() as f_h:
             for line in f_h.readlines():
-                if line.startswith('#'):
+                if line.startswith("#"):
                     continue
                 try:
                     key, val = line.split("=", maxsplit=1)
                     os.environ.setdefault(key.strip(), val.strip())
                 except ValueError:
                     pass
+
     current = Path(env_file)
     parent = Path().parent / env_file
-    if current.exists()
+    if current.exists():
         load_env(current)
-    else if parent.exists():
+    elif parent.exists():
         load_env(parent)

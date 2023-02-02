@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- typo
+
 ## [v5.12.0] - 2023-02-02
 
 - `utils.get_env()` works in main dir or subdir, for use in `manage.py`, `wsgi.py` and `asgi.py`
