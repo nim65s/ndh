@@ -1,6 +1,7 @@
 """General utils for NDH."""
 import os
-from typing import Optional, TypeVar, Union, TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING, Optional, TypeVar, Union
 
 from django.db import models
 from django.db.models.functions import Coalesce
@@ -33,13 +34,17 @@ def query_sum(
 
 def get_env(env_file: str = ".env") -> None:
     """Set default environment variables from .env file."""
-    try:
-        with open(env_file) as f_h:
+    def load_env(path: Path):
+        with path.open() as f_h:
             for line in f_h.readlines():
                 try:
                     key, val = line.split("=", maxsplit=1)
                     os.environ.setdefault(key.strip(), val.strip())
                 except ValueError:
                     pass
-    except FileNotFoundError:  # pragma: no cover
-        pass
+    current = Path(env_file)
+    parent = Path().parent / env_file
+    if current.exists()
+        load_env(current)
+    else if parent.exists():
+        load_env(parent)
