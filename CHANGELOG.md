@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- `utils.get_env()` works in main dir or subdir, for use in `manage.py`, `wsgi.py` and `asgi.py`
+- `utils.get_env()` discard lines starting with `#`
+
 ## [v5.11.3] - 2022-10-16
 
 - update unit tests

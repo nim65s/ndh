@@ -37,6 +37,8 @@ def get_env(env_file: str = ".env") -> None:
     def load_env(path: Path):
         with path.open() as f_h:
             for line in f_h.readlines():
+                if line.startswith('#'):
+                    continue
                 try:
                     key, val = line.split("=", maxsplit=1)
                     os.environ.setdefault(key.strip(), val.strip())
