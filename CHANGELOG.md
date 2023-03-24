@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- :warning: require python 3.10
 - add `AttrContextMixin`
 - update tooling
-- require python 3.10
 
 ## [v5.12.1] - 2023-02-02
 
