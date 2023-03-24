@@ -15,7 +15,7 @@ from .utils import full_url
 class Links:
     """A mixin to get links."""
 
-    id: int
+    id: int  # noqa: A003
     pk: int
     slug: str
     _meta: Any
@@ -31,8 +31,7 @@ class Links:
                 if hasattr(self, "slug")
                 else {"pk": self.pk},
             )
-        else:
-            return reverse(f"{app}:{model}s")
+        return reverse(f"{app}:{model}s")
 
     def get_admin_url(self) -> str:
         """Get the admin url for an instance."""

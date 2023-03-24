@@ -14,19 +14,19 @@
 import os
 import sys
 from pathlib import Path
-from typing import List
 
 import django
+
 import toml
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
-sys.path.insert(0, os.path.abspath(".."))
+sys.path.insert(0, Path("..").resolve())
 django.setup()
 
 # -- Project information -----------------------------------------------------
 
 project = "ndh"
-copyright = "2017-2021, Guilhem Saurel"
+copyright = "2017-2021, Guilhem Saurel"  # noqa: A001
 author = "Guilhem Saurel"
 
 with (Path(__file__).parent.parent / "pyproject.toml").open() as f:
@@ -45,7 +45,7 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns: List[str] = []
+exclude_patterns: list[str] = []
 
 # -- Options for HTML output -------------------------------------------------
 

@@ -2,12 +2,14 @@
 import os
 from datetime import timedelta
 from decimal import Decimal
+from pathlib import Path
 
 from django.contrib.auth.models import User
 from django.db import models
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
+
 from ndh.utils import get_env, query_sum
 
 from .models import TestModel, TestModelList, TestModelPK
@@ -37,27 +39,29 @@ class TestNDH(TestCase):
         self.assertLess(almost_zero, instance.updated - instance.created)
 
         # test links
-        FULL = "https://example.com"
+        full = "https://example.com"
         self.assertEqual(instance.get_absolute_url(), f"/test/{instance.slug}")
-        self.assertEqual(instance.get_full_url(), f"{FULL}/test/{instance.slug}")
+        self.assertEqual(instance.get_full_url(), f"{full}/test/{instance.slug}")
         self.assertEqual(
-            str(instance.get_link()), f'<a href="/test/{instance.slug}">{instance}</a>'
+            str(instance.get_link()),
+            f'<a href="/test/{instance.slug}">{instance}</a>',
         )
         self.assertEqual(
-            str(instance.get_md_link()), f"[{instance}](/test/{instance.slug})"
+            str(instance.get_md_link()),
+            f"[{instance}](/test/{instance.slug})",
         )
         self.assertEqual(
             str(instance.get_full_link()),
-            f'<a href="{FULL}/test/{instance.slug}">{instance}</a>',
+            f'<a href="{full}/test/{instance.slug}">{instance}</a>',
         )
         self.assertEqual(
             str(instance.get_full_md_link()),
-            f"[{instance}]({FULL}/test/{instance.slug})",
+            f"[{instance}]({full}/test/{instance.slug})",
         )
         self.assertEqual(instance.get_admin_url(), "/admin/testapp/testmodel/1/change/")
         self.assertEqual(
             instance.get_full_admin_url(),
-            f"{FULL}/admin/testapp/testmodel/1/change/",
+            f"{full}/admin/testapp/testmodel/1/change/",
         )
 
         # test query_sum
@@ -85,7 +89,10 @@ class TestNDH(TestCase):
         self.assertIn(mail, r.content.decode())
 
         User.objects.create_user(
-            username="test", password="test", first_name="test", last_name="test"
+            username="test",
+            password="test",
+            first_name="test",
+            last_name="test",
         )
         self.client.login(username="test", password="test")
 
@@ -115,7 +122,7 @@ class TestNDH(TestCase):
                     '<a class="nav-link" href="/test/">List</a></li>',
                     '<li class="nav-item me-auto ">'
                     '<a class="nav-link" href="/test/create">Create</a></li>',
-                ]
+                ],
             ),
             r.content.decode(),
         )
@@ -127,7 +134,7 @@ class TestNDH(TestCase):
                     '<a class="nav-link" href="/test/">List</a></li>',
                     '<li class="nav-item me-auto active">'
                     '<a class="nav-link" href="/test/create">Create</a></li>',
-                ]
+                ],
             ),
             r.content.decode(),
         )
@@ -153,7 +160,7 @@ class TestNDH(TestCase):
         self.assertEqual(TestModel.objects.count(), 1)
 
         r = self.client.get(
-            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug])
+            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug]),
         )
         self.assertEqual(r.status_code, 302)
 
@@ -161,14 +168,14 @@ class TestNDH(TestCase):
         self.client.login(username="super", password="super")
 
         r = self.client.get(
-            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug])
+            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug]),
         )
         self.assertEqual(r.status_code, 200)
 
         self.assertEqual(TestModel.objects.count(), 1)
 
         r = self.client.post(
-            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug])
+            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug]),
         )
         self.assertEqual(r.status_code, 302)
 
@@ -177,7 +184,8 @@ class TestNDH(TestCase):
     def test_absolute_url_list(self):
         """Test ndh.models's get_absolute_url for lists."""
         instance = TestModelList.objects.create(
-            name="Pipo 22 é@ü", moment=timezone.now()
+            name="Pipo 22 é@ü",
+            moment=timezone.now(),
         )
         self.assertEqual(instance.get_absolute_url(), reverse("testapp:testmodellists"))
 
@@ -188,19 +196,17 @@ class TestNDH(TestCase):
 
     def test_utils(self):
         """Test ndh.utils."""
-        key, val, no_key, env_file = (
-            "DJANGO_TEST_GET_ENV",
-            "it=works",
-            "KEY_WITHOUT_VAL",
-            ".env",
-        )
+        key = "DJANGO_TEST_GET_ENV"
+        val = "it=works"
+        no_key = "KEY_WITHOUT_VAL"
+        env_file = Path(".env")
         get_env(env_file)
         if key in os.environ:
             val = os.environ[key]
         else:
-            with open(env_file, "a") as f:
+            with env_file.open("a") as f:
                 print(f"{key}={val}", file=f)
-        with open(env_file, "a") as f:
+        with env_file.open("a") as f:
             print(no_key, file=f)
         get_env(env_file)
         self.assertIn(key, os.environ)
@@ -208,25 +214,27 @@ class TestNDH(TestCase):
         self.assertNotIn(no_key, os.environ)
 
         # Clean the file
-        with open(env_file) as f:
+        with env_file.open() as f:
             lines = f.readlines()
-        with open(env_file, "w") as f:
+        with env_file.open("w") as f:
             f.write(
                 "\n".join(
                     line
                     for line in lines
                     if not line.startswith(key) and not line.startswith(no_key)
-                )
+                ),
             )
 
     def test_context_processors(self):
         """Test ndh.context_processors."""
         self.assertNotIn(
-            "UTC", self.client.get(reverse("testapp:settings")).content.decode()
+            "UTC",
+            self.client.get(reverse("testapp:settings")).content.decode(),
         )
         with self.settings(NDH_TEMPLATES_SETTINGS=["TIME_ZONE"]):
             self.assertIn(
-                "UTC", self.client.get(reverse("testapp:settings")).content.decode()
+                "UTC",
+                self.client.get(reverse("testapp:settings")).content.decode(),
             )
 
     def test_continue_edit(self):

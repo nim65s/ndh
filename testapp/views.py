@@ -1,6 +1,7 @@
 """Views for testapp."""
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, UpdateView
+
 from ndh.mixins import NDHDeleteMixin, NDHFormMixin, SuperUserRequiredMixin
 
 from .forms import TestForm

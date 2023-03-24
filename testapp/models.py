@@ -1,6 +1,7 @@
 """Models for the testapp."""
 
 from django.db import models
+
 from ndh.models import Links, NamedModel, TimeStampedModel
 
 

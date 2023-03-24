@@ -1,6 +1,5 @@
 """Django settings for testproject project."""
 
-from typing import List
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -17,7 +16,7 @@ SECRET_KEY = "z*j^4m$4aa9r3yb$ri9+7jnl^z1=4e(&j=l3-*8a46lz%1$7mv"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS: List[str] = []
+ALLOWED_HOSTS: list[str] = []
 
 # Application definition
 
@@ -74,7 +73,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    }
+    },
 }
 
 # Password validation

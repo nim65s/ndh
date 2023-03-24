@@ -1,55 +1,54 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.coverage.run]
+omit = ["*/apps.py", "*/migrations/*", "*/wsgi.py"]
+source = ["ndh"]
+
+[tool.isort]
+known_django = "django"
+profile = "black"
+sections = "FUTURE,STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+
 [tool.poetry]
-name = "ndh"
-version = "5.12.1"
-description = "Nim's Django Helpers"
 authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
-license = "BSD-2-Clause"
-readme = "README.md"
-homepage = "https://github.com/nim65s/ndh"
-repository = "https://github.com/nim65s/ndh.git"
+description = "Nim's Django Helpers"
 documentation = "https://ndh.readthedocs.io/"
+homepage = "https://github.com/nim65s/ndh"
+license = "BSD-2-Clause"
+name = "ndh"
+readme = "README.md"
+repository = "https://github.com/nim65s/ndh.git"
+version = "5.12.1"
+
+[tool.poetry.dependencies]
+django-autoslug = "^1.9.8"
+django-bootstrap5 = "^22.1"
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+Jinja2 = "<3.1"
+Sphinx = "^3.5.3"
+black = "^22.6.0"
+coverage = {extras = ["toml"], version = "^6.3.2"}
+isort = "^5.12.0"
+pre-commit = "^2.11.1"
+ruff = "^0.0.254"
+safety = {allow-prereleases = true, version = "^2.4.0b1"}
+
+[tool.poetry.group.dev]
+optional = true
 
 [tool.poetry.urls]
 changelog = "https://github.com/nim65s/ndh/blob/master/CHANGELOG.md"
 
-[tool.poetry.dependencies]
-python = "^3.8"
-django-autoslug = "^1.9.8"
-django-bootstrap5 = "^22.1"
+[tool.ruff]
+allowed-confusables = [" "]
+extend-exclude = ["migrations"]
+extend-ignore = ["D203", "D213"]
+extend-select = ["A", "B", "C", "COM", "D", "DJ", "EM", "EXE", "G", "N", "PTH", "RET", "RUF", "UP", "W", "YTT"]
+target-version = "py310"
 
-[tool.poetry.dev-dependencies]
-black = "^22.6.0"
-coverage = {extras = ["toml"], version = "^6.3.2"}
-django-stubs = "^1.9.0"
-flake8 = "^3.9.2"
-#mypy = "^0.971"
-myst-parser = "^0.15.1"
-pre-commit = "^2.11.1"
-pydocstyle = {extras = ["toml"], version = "^6.1.1"}
-safety = "^2.2.0"
-Sphinx = "^3.5.3"
-types-setuptools = "^57.4.9"
-types-toml = "^0.10.4"
-pyupgrade = "^2.31.0"
-Jinja2 = "<3.1"
-
-[tool.black]
-target-version = ['py38']
-
-[tool.coverage.run]
-source = ["ndh"]
-omit = ["*/migrations/*", "*/wsgi.py", "*/apps.py"]
-
-[tool.django-stubs]
-django_settings_module = "testproject.settings"
-
-#[tool.mypy]
-#plugins = ["mypy_django_plugin.main"]
-
-[tool.pydocstyle]
-ignore = "D203,D204"  # https://github.com/google/yapf/issues/744
-match_dir = "(?=[^\\.])(?!migrations).*"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.tomlsort]
+all = true
