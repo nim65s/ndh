@@ -1,5 +1,16 @@
 """General view Mixins for NDH."""
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.views.generic.base import ContextMixin
+
+
+class AttrContextMixin(ContextMixin):
+    """Mixin to add view attributes to context."""
+
+    attr_context = []
+
+    def get_context_data(self, **kwargs):
+        """Update context from attributes."""
+        return {**{key: getattr(self, key) for key in self.attr_context}, **kwargs}
 
 
 class SuperUserRequiredMixin(UserPassesTestMixin):
@@ -10,18 +21,13 @@ class SuperUserRequiredMixin(UserPassesTestMixin):
         return self.request.user.is_superuser
 
 
-class NDHFormMixin:
+class NDHFormMixin(AttrContextMixin):
     """Mixin setting a default form template and title."""
 
     template_name = "ndh/base_form.html"
     title = ""
     continue_edit = False
-
-    def get_context_data(self, **kwargs):
-        """Add title to the context."""
-        return super().get_context_data(
-            title=self.title, continue_edit=self.continue_edit, **kwargs
-        )
+    attr_context = ["title", "continue_edit"]
 
     def get_success_url(self):
         """Redirect to current page if continue_edit."""
