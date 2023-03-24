@@ -10,7 +10,10 @@ class AttrContextMixin(ContextMixin):
 
     def get_context_data(self, **kwargs):
         """Update context from attributes."""
-        return {**{key: getattr(self, key) for key in self.attr_context}, **kwargs}
+        return super().get_context_data(
+            **{key: getattr(self, key) for key in self.attr_context},
+            **kwargs,
+        )
 
 
 class SuperUserRequiredMixin(UserPassesTestMixin):
