@@ -1,11 +1,13 @@
 name: Tests
+
 on: [push, pull_request]
+
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8","3.9","3.10"]
+        python-version: ["3.10", "3.11"]
     steps:
       - uses: actions/checkout@v3
       - run: pipx install poetry
@@ -14,7 +16,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: poetry
       - name: setup
-        run: poetry install --no-interaction --no-ansi
+        run: poetry install --with dev --no-interaction --no-ansi
       - run: poetry run ./manage.py migrate
         env:
           PYTHONWARNINGS: error
