@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v6.1.0] - 2023-04-03
+
 - improve `Links` with getters for create, delete, detail, list & update urls
 
 ## [v6.0.0] - 2023-03-24
@@ -302,7 +304,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v6.0.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v6.1.0...master
+[v6.1.0]: https://github.com/nim65s/ndh/compare/v6.0.0...v6.1.0
 [v6.0.0]: https://github.com/nim65s/ndh/compare/v5.12.1...v6.0.0
 [v5.12.1]: https://github.com/nim65s/ndh/compare/v5.12.0...v5.12.1
 [v5.12.0]: https://github.com/nim65s/ndh/compare/v5.11.3...v5.12.0
