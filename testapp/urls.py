@@ -22,5 +22,5 @@ urlpatterns = [
     ),
     path("<slug:slug>", DetailView.as_view(model=TestModel), name="testmodel"),
     path("<slug:slug>/update", views.TestUpdateView.as_view(), name="testmodel-update"),
-    path("<slug:slug>/delete", views.TestDeleteView.as_view(), name="testmodel-del"),
+    path("<slug:slug>/delete", views.TestDeleteView.as_view(), name="testmodel-delete"),
 ]

@@ -63,6 +63,14 @@ class TestNDH(TestCase):
             instance.get_full_admin_url(),
             f"{full}/admin/testapp/testmodel/1/change/",
         )
+        self.assertEqual(instance.get_create_url(), "/test/create")
+        self.assertEqual(instance.get_delete_url(), "/test/pipo-22-eu/delete")
+        self.assertEqual(instance.get_detail_url(), "/test/pipo-22-eu")
+        self.assertEqual(instance.get_list_url(), "/test/")
+        self.assertEqual(instance.get_update_url(), "/test/pipo-22-eu/update")
+
+        self.assertEqual(TestModel.get_create_url(), "/test/create")
+        self.assertEqual(TestModel.get_list_url(), "/test/")
 
         # test query_sum
         self.assertEqual(query_sum(TestModel.objects.all(), "tests"), 42)
@@ -160,7 +168,7 @@ class TestNDH(TestCase):
         self.assertEqual(TestModel.objects.count(), 1)
 
         r = self.client.get(
-            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug]),
+            reverse("testapp:testmodel-delete", args=[TestModel.objects.first().slug]),
         )
         self.assertEqual(r.status_code, 302)
 
@@ -168,14 +176,14 @@ class TestNDH(TestCase):
         self.client.login(username="super", password="super")
 
         r = self.client.get(
-            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug]),
+            reverse("testapp:testmodel-delete", args=[TestModel.objects.first().slug]),
         )
         self.assertEqual(r.status_code, 200)
 
         self.assertEqual(TestModel.objects.count(), 1)
 
         r = self.client.post(
-            reverse("testapp:testmodel-del", args=[TestModel.objects.first().slug]),
+            reverse("testapp:testmodel-delete", args=[TestModel.objects.first().slug]),
         )
         self.assertEqual(r.status_code, 302)
 

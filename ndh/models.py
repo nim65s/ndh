@@ -20,18 +20,58 @@ class Links:
     slug: str
     _meta: Any
     absolute_url_detail: bool = True
+    create_view_name_suffix = "-add"
+    delete_view_name_suffix = "-delete"
+    detail_view_name_suffix = ""
+    list_view_name_suffix = "s"
+    update_view_name_suffix = "-update"
+
+    def get_pk_or_slug(self):
+        """Provide the right kwargs for reverse()."""
+        return {"slug": self.slug} if hasattr(self, "slug") else {"pk": self.pk}
+
+    @classmethod
+    def get_view_name(cls, suffix, app=True) -> str:
+        """Provide the common view name prefix."""
+        app = f"{cls._meta.app_label}:" if app else ""
+        return f"{app}{cls._meta.model_name}{suffix}"
+
+    @classmethod
+    def get_create_url(cls, app=True) -> str:
+        """Get the absolute url to create an instance of this model."""
+        return reverse(cls.get_view_name(cls.create_view_name_suffix, app))
+
+    def get_delete_url(self, app=True) -> str:
+        """Get the absolute url to delete an instance of this model."""
+        return reverse(
+            self.get_view_name(self.delete_view_name_suffix, app),
+            kwargs=self.get_pk_or_slug(),
+        )
+
+    def get_detail_url(self, app=True) -> str:
+        """Get the absolute url to detail an instance of this model."""
+        return reverse(
+            self.get_view_name(self.detail_view_name_suffix, app),
+            kwargs=self.get_pk_or_slug(),
+        )
+
+    @classmethod
+    def get_list_url(cls, app=True) -> str:
+        """Get the absolute url to list instances of this model."""
+        return reverse(cls.get_view_name(cls.list_view_name_suffix, app))
+
+    def get_update_url(self, app=True) -> str:
+        """Get the absolute url to update an instance of this model."""
+        return reverse(
+            self.get_view_name(self.update_view_name_suffix, app),
+            kwargs=self.get_pk_or_slug(),
+        )
 
     def get_absolute_url(self) -> str:
         """Get the absolute url for a queryset or an instance."""
-        app, model = self._meta.app_label, self._meta.model_name
         if self.absolute_url_detail:
-            return reverse(
-                f"{app}:{model}",
-                kwargs={"slug": self.slug}
-                if hasattr(self, "slug")
-                else {"pk": self.pk},
-            )
-        return reverse(f"{app}:{model}s")
+            return self.get_detail_url()
+        return self.get_list_url()
 
     def get_admin_url(self) -> str:
         """Get the admin url for an instance."""

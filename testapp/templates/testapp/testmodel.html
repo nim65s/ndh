@@ -7,5 +7,5 @@
     <td>{{ object.tests }}</td>
     <td>{{ object.moment }}</td>
     <td><a href="{% url 'testapp:testmodel-update' object.slug %}">update</a></td>
-    <td><a href="{% url 'testapp:testmodel-del' object.slug %}">delete</a></td>
+    <td><a href="{% url 'testapp:testmodel-delete' object.slug %}">delete</a></td>
   </tr>

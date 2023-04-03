@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- improve `Links` with getters for create, delete, detail, list & update urls
+
 ## [v6.0.0] - 2023-03-24
 
 - :warning: require python 3.10
