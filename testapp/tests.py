@@ -10,9 +10,31 @@ from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
+from ndh.tests import TestNDHLinks
 from ndh.utils import get_env, query_sum
 
 from .models import TestModel, TestModelList, TestModelPK
+
+
+class TestLinks(TestNDHLinks, TestCase):
+    """Test ndh links."""
+
+    public_views = {
+        TestModel: ["detail", "update", "list", "create", "absolute"],
+        TestModelList: ["list", "absolute"],
+        TestModelPK: ["detail", "absolute"],
+    }
+    private_views = {
+        TestModel: ["delete", "admin"],
+        TestModelList: ["admin"],
+        TestModelPK: ["admin"],
+    }
+
+    def setUp(self):
+        """Create dummy objects."""
+        TestModel.objects.create(name="Hey", moment=timezone.now())
+        TestModelList.objects.create(name="Ho", moment=timezone.now())
+        TestModelPK.objects.create()
 
 
 class TestNDH(TestCase):

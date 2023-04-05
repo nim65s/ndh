@@ -15,7 +15,7 @@ class TestModel(Links, TimeStampedModel, NamedModel):
 
 
 class TestModelList(TestModel):
-    """Test model for get__absolute_url for lists."""
+    """Test model for get_absolute_url for lists."""
 
     absolute_url_detail = False
 
