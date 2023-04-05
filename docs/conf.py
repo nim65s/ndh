@@ -21,6 +21,7 @@ import toml
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 sys.path.insert(0, Path("..").resolve())
+sys.path.insert(0, Path(".").resolve())
 django.setup()
 
 # -- Project information -----------------------------------------------------
