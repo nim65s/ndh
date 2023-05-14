@@ -23,8 +23,8 @@ repository = "https://github.com/nim65s/ndh.git"
 version = "6.2.0"
 
 [tool.poetry.dependencies]
-django-autoslug = "^1.9.8"
-django-bootstrap5 = "^22.1"
+django-autoslug = "^1.9.9"
+django-bootstrap5 = "^23.1"
 python = "^3.10"
 
 [tool.poetry.group.dev]
