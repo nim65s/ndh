@@ -12,7 +12,7 @@ if TYPE_CHECKING:  # pragma: no cover
 Numeric = TypeVar("Numeric", int, float)
 
 
-def full_url(url: str = "", domain: str = None, protocol: str = "https") -> str:
+def full_url(url: str = "", domain: None | str = None, protocol: str = "https") -> str:
     """Prepend protocol and domain name to an url."""
     if domain is None:
         from django.contrib.sites.models import Site
