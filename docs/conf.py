@@ -30,7 +30,7 @@ copyright = "2017-2021, Guilhem Saurel"  # noqa: A001
 author = "Guilhem Saurel"
 
 with (Path(__file__).parent.parent / "pyproject.toml").open() as f:
-    print(toml.load(f)["tool"]["poetry"]["version"])
+    release = toml.load(f)["tool"]["poetry"]["version"]
 
 # -- General configuration ---------------------------------------------------
 
