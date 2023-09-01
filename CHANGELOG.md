@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v6.3.0] - 2023-09-01
+
 - Add `ndh.utils.set_env`
 
 ## [v6.2.0] - 2023-04-06
@@ -310,7 +312,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v6.2.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v6.3.0...master
+[v6.3.0]: https://github.com/nim65s/ndh/compare/v6.2.0...v6.3.0
 [v6.2.0]: https://github.com/nim65s/ndh/compare/v6.1.0...v6.2.0
 [v6.1.0]: https://github.com/nim65s/ndh/compare/v6.0.0...v6.1.0
 [v6.0.0]: https://github.com/nim65s/ndh/compare/v5.12.1...v6.0.0
