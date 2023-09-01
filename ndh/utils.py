@@ -36,8 +36,8 @@ def get_env(env_file: str = ".env") -> None:
     """Set default environment variables from .env file."""
 
     def load_env(path: Path):
-        with path.open() as f_h:
-            for line in f_h.readlines():
+        with path.open() as f:
+            for line in f.readlines():
                 if line.startswith("#"):
                     continue
                 try:
@@ -52,3 +52,30 @@ def get_env(env_file: str = ".env") -> None:
         load_env(current)
     elif parent.exists():
         load_env(parent)
+
+
+def set_env(var: str, val: str, env_file: str = ".env") -> None:
+    """Set default environment variables from .env file."""
+
+    def update_env(path: Path):
+        with path.open() as f:
+            lines = f.readlines()
+
+        updated = False
+
+        with path.open("w") as f:
+            for line in lines:
+                if not line.startswith("#") and line.split("=")[0].strip() == var:
+                    print(f"{var} = {val}", file=f)
+                    updated = True
+                else:
+                    print(line.strip(), file=f)
+            if not updated:
+                print(f"{var} = {val}", file=f)
+
+    current = Path(env_file)
+    parent = Path().parent / env_file
+    if current.exists():
+        update_env(current)
+    elif parent.exists():
+        update_env(parent)
