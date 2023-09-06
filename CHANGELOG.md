@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- `show_email` & `show_phone`: fix for multiple occurences per page
+
 ## [v6.4.0] - 2023-09-06
 
 - Add `show_phone` simple tag
