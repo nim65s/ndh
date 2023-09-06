@@ -9,24 +9,24 @@ register = template.Library()
 
 
 EMAIL_JS = """<script>
-{
+{{
    const end = '{end}';
    const start = '{start}';
    const both = start + '@' + end;
    const link = '<a href="mailto:' + both  + '">' + both + '</a>';
    document.write(link);
-}
+}}
 </script>
 <noscript>{noscript}</noscript>
 """
 
 
 TEL_JS = """<script>
-{
+{{
    const num = '{phone}';
    const link = '<a href="tel:' + num  + '">' + num + '</a>';
    document.write(link);
-}
+}}
 </script>
 <noscript>{phone}</noscript>
 """

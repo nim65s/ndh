@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix curly brace escaping in format strings
+
 ## [v6.4.1] - 2023-09-06
 
 - `show_email` & `show_phone`: fix for multiple occurences per page
