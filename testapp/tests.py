@@ -114,8 +114,7 @@ class TestNDH(TestCase):
         """Test ndh.templatetags."""
         r = self.client.get(reverse("test"))
         self.assertEqual(r.status_code, 200)
-        mail = '<span class="mail">test<span class="at">'
-        mail += '</span>example<span class="dot"></span>org</span>'
+        mail = 'test<span class="at"></span>example<span class="dot"></span>org'
         self.assertIn(mail, r.content.decode())
 
         User.objects.create_user(
