@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add `show_phone` simple tag
+- `show_email` & `show_phone`: provide links via javascript
+
 ## [v6.3.0] - 2023-09-01
 
 - Add `ndh.utils.set_env`
