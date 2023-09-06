@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v6.4.2] - 2023-09-06
+
 - fix curly brace escaping in format strings
 
 ## [v6.4.1] - 2023-09-06
@@ -323,7 +325,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v6.4.1...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v6.4.2...master
+[v6.4.2]: https://github.com/nim65s/ndh/compare/v6.4.1...v6.4.2
 [v6.4.1]: https://github.com/nim65s/ndh/compare/v6.4.0...v6.4.1
 [v6.4.0]: https://github.com/nim65s/ndh/compare/v6.3.0...v6.4.0
 [v6.3.0]: https://github.com/nim65s/ndh/compare/v6.2.0...v6.3.0
