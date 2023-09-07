@@ -2,8 +2,6 @@
 .euro:after { content: ' €'; }
 .at:after { content: '@'; }
 .dot:after { content: '.'; }
-.mail:after, .phone:after { content: '>'; }
-.mail:before, .phone:before { content: '<'; }
 dt { text-align: right; }
 .smcp {
   -moz-font-feature-settings: 'smcp';

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- css: remove brackets around .mail
+
 ## [v6.4.2] - 2023-09-06
 
 - fix curly brace escaping in format strings
