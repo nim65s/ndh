@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v6.5.0] - 2023-09-07
+
 - css: remove brackets around .mail
 
 ## [v6.4.2] - 2023-09-06
@@ -327,7 +329,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v6.4.2...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v6.5.0...master
+[v6.5.0]: https://github.com/nim65s/ndh/compare/v6.4.2...v6.5.0
 [v6.4.2]: https://github.com/nim65s/ndh/compare/v6.4.1...v6.4.2
 [v6.4.1]: https://github.com/nim65s/ndh/compare/v6.4.0...v6.4.1
 [v6.4.0]: https://github.com/nim65s/ndh/compare/v6.3.0...v6.4.0
