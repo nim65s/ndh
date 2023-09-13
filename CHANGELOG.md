@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- release: use pipx
+
 ## [v6.5.1] - 2023-09-13
 
 - `show_phone`: remove spaces in link
