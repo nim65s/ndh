@@ -6,8 +6,6 @@ from django.views.generic import DetailView, ListView, TemplateView
 from . import views
 from .models import TestModel, TestModelList, TestModelPK
 
-CTX = {"email": "test@example.org", "phone": "+33 1 23 45 67 89"}
-
 app_name = "testapp"
 urlpatterns = [
     path("", ListView.as_view(model=TestModel), name="testmodels"),

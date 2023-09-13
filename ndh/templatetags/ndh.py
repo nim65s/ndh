@@ -24,7 +24,7 @@ EMAIL_JS = """<script>
 TEL_JS = """<script>
 {{
    const num = '{phone}';
-   const num_nosp = '{phone.replace(' ', '')}';
+   const num_nosp = '{phone_nosp}';
    const link = '<a href="tel:' + num_nosp  + '">' + num + '</a>';
    document.write(link);
 }}
@@ -49,10 +49,11 @@ def show_email(context: dict, mail: str) -> str:
 @register.simple_tag(takes_context=True)
 def show_phone(context: dict, phone: str) -> str:
     """Show phone number as a link to connected users, and obfuscated for others."""
+    phone_nosp = phone.replace(" ", "")
     if context["request"].user.is_authenticated:
-        content = f'<a href="tel:{phone.replace(" ", "")}">{phone}</a>'
+        content = f'<a href="tel:{phone_nosp}">{phone}</a>'
     else:
-        content = TEL_JS.format(phone=phone)
+        content = TEL_JS.format(phone=phone, phone_nosp=phone_nosp)
     return mark_safe(f'<span class="phone">{content}</span>')
 
 
