@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fix release
+
 ## [v6.5.2] - 2023-09-13
 
 - release: use pipx
