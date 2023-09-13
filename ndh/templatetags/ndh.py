@@ -49,7 +49,7 @@ def show_email(context: dict, mail: str) -> str:
 @register.simple_tag(takes_context=True)
 def show_phone(context: dict, phone: str) -> str:
     """Show phone number as a link to connected users, and obfuscated for others."""
-    phone_nosp = phone.replace(" ", "")
+    phone_nosp = phone.replace(" ", "").replace("(", "").replace(")", "")
     if context["request"].user.is_authenticated:
         content = f'<a href="tel:{phone_nosp}">{phone}</a>'
     else:

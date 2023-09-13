@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - release: use pipx
+- `show_phone`: allow (+33)
 
 ## [v6.5.1] - 2023-09-13
 
