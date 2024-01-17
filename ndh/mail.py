@@ -2,6 +2,7 @@
 
 from django.utils.safestring import mark_safe
 
+AT, DOT = (f'<span class="{tag}"></span>' for tag in ("at", "dot"))
 EMAIL_JS = """<script>
 {{
    const mails = {mails}.map((m) => m.join('@')).join();
@@ -19,8 +20,7 @@ def show_emails(authenticated: bool, *mails: [str], text: str = "") -> str:
         mails = ",".join(mails)
         content = f'<a href="mailto:{mails}">{text or mails}</a>'
     else:
-        at, dot = (f'<span class="{tag}"></span>' for tag in ("at", "dot"))
-        noscript = ",".join(mails).replace("@", at).replace(".", dot)
+        noscript = ",".join(mails).replace("@", AT).replace(".", DOT)
         content = EMAIL_JS.format(
             mails=[m.split("@") for m in mails],
             noscript=noscript,
