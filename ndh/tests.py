@@ -12,9 +12,14 @@ class TestMail(TestCase):
     def test_show_emails(self):
         """Test show_emails function."""
         mail = "abc@def.com"
+        text = "text"
 
         self.assertIn(mail, show_emails(True, mail))
         self.assertNotIn(mail, show_emails(False, mail))
+        self.assertIn(mail, show_emails(True, mail, text=text))
+        self.assertNotIn(mail, show_emails(False, mail, text=text))
+        self.assertIn(text, show_emails(True, mail, text=text))
+        self.assertIn(text, show_emails(False, mail, text=text))
 
 
 class TestNDHLinks(TestCase):

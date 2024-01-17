@@ -10,6 +10,9 @@
 {% endblock %}
 
 {% block content %}
-{% show_email email %}
-{% show_phone phone %}
+<ul>
+    <li>{% show_email email %}</li>
+    <li>{% show_email email text="hey" %}</li>
+    <li>{% show_phone phone %}</li>
+</ul>
 {% endblock %}
