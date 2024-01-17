@@ -129,7 +129,7 @@ class TestNDH(TestCase):
         r = self.client.get(reverse("test"))
         self.assertEqual(r.status_code, 200)
         mail = '<span class="mail">'
-        mail += '<a href="mailto:test@example.org">test@example.org</a></span>'
+        mail += '<a  href="mailto:test@example.org">test@example.org</a></span>'
         self.assertIn(mail, r.content.decode())
 
         User.objects.create_user(username="super", password="super", is_superuser=True)
