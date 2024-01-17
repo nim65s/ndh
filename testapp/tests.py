@@ -112,17 +112,18 @@ class TestNDH(TestCase):
 
     def test_templatetags(self):
         """Test ndh.templatetags."""
-        r = self.client.get(reverse("test"))
-        self.assertEqual(r.status_code, 200)
-        mail = 'test<span class="at"></span>example<span class="dot"></span>org'
-        self.assertIn(mail, r.content.decode())
-
         User.objects.create_user(
             username="test",
             password="test",
             first_name="test",
             last_name="test",
+            email="test@example.org",
         )
+
+        r = self.client.get(reverse("test"))
+        self.assertEqual(r.status_code, 200)
+        mail = 'test<span class="at"></span>example<span class="dot"></span>org'
+        self.assertIn(mail, r.content.decode())
         self.client.login(username="test", password="test")
 
         r = self.client.get(reverse("test"))

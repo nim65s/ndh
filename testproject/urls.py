@@ -1,9 +1,14 @@
 """Main URLS for the test project."""
 from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.urls import include, path
 from django.views.generic import TemplateView
 
-CTX = {"email": "test@example.org", "phone": "(+33) 1 23 45 67 89"}
+CTX = {
+    "email": "test@example.org",
+    "phone": "(+33) 1 23 45 67 89",
+    "user": get_user_model().objects.first,
+}
 
 urlpatterns = [
     path("admin/", admin.site.urls),

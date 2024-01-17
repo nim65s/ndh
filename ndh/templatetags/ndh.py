@@ -1,11 +1,14 @@
 """Django template tags for NDH."""
 
 from django import template
+from django.contrib.auth import get_user_model
 from django.db.models.query import QuerySet
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 
 from ndh.mail import show_emails
+
+User = get_user_model()
 
 register = template.Library()
 
@@ -23,11 +26,16 @@ TEL_JS = """<script>
 
 
 @register.simple_tag(takes_context=True)
-def show_email(context: dict, *mails: [str], text: str = "", subject: str = "") -> str:
+def show_email(
+    context: dict,
+    *to: [User | str],
+    text: str = "",
+    subject: str = "",
+) -> str:
     """Show an email as a link to connected users, and obfuscated for others."""
     return show_emails(
         context["request"].user.is_authenticated,
-        *mails,
+        *to,
         text=text,
         subject=subject,
     )
@@ -71,7 +79,7 @@ def navbar_item(context, view_name: str, link: str) -> str:
 
 
 @register.filter
-def user_smcp(user):
+def user_smcp(user: User):
     """Get user's capitalized `first_name` + capitalized & small-capsed `last_name`."""
     return mark_safe(
         f"{user.first_name.capitalize()} "

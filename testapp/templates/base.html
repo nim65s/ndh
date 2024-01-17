@@ -19,6 +19,14 @@
     <li>{% show_email email text="hey" subject="hello" %}</li>
     <li>{% show_email email email subject="hello" %}</li>
     <li>{% show_email email email text="hey" subject="hello" %}</li>
+    <li>{% show_email user %}</li>
+    <li>{% show_email user text="hey" %}</li>
+    <li>{% show_email user email %}</li>
+    <li>{% show_email user email text="hey" %}</li>
+    <li>{% show_email user subject="hello" %}</li>
+    <li>{% show_email user text="hey" subject="hello" %}</li>
+    <li>{% show_email user email subject="hello" %}</li>
+    <li>{% show_email user email text="hey" subject="hello" %}</li>
     <li>{% show_phone phone %}</li>
 </ul>
 {% endblock %}
