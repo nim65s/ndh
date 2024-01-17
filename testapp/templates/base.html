@@ -15,6 +15,10 @@
     <li>{% show_email email text="hey" %}</li>
     <li>{% show_email email email %}</li>
     <li>{% show_email email email text="hey" %}</li>
+    <li>{% show_email email subject="hello" %}</li>
+    <li>{% show_email email text="hey" subject="hello" %}</li>
+    <li>{% show_email email email subject="hello" %}</li>
+    <li>{% show_email email email text="hey" subject="hello" %}</li>
     <li>{% show_phone phone %}</li>
 </ul>
 {% endblock %}

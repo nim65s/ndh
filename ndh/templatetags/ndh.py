@@ -23,9 +23,14 @@ TEL_JS = """<script>
 
 
 @register.simple_tag(takes_context=True)
-def show_email(context: dict, *mails: [str], text: str = "") -> str:
+def show_email(context: dict, *mails: [str], text: str = "", subject: str = "") -> str:
     """Show an email as a link to connected users, and obfuscated for others."""
-    return show_emails(context["request"].user.is_authenticated, *mails, text=text)
+    return show_emails(
+        context["request"].user.is_authenticated,
+        *mails,
+        text=text,
+        subject=subject,
+    )
 
 
 @register.simple_tag(takes_context=True)
