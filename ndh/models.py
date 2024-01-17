@@ -15,7 +15,7 @@ from .utils import full_url
 class Links:
     """A mixin to get links."""
 
-    id: int  # noqa: A003
+    id: int
     pk: int
     slug: str
     _meta: Any
