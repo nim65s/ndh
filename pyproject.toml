@@ -24,7 +24,7 @@ version = "6.5.3"
 
 [tool.poetry.dependencies]
 django-autoslug = "^1.9.9"
-django-bootstrap5 = "^23.3"
+django-bootstrap5 = "^23.4"
 python = "^3.10"
 
 [tool.poetry.group.dev]
