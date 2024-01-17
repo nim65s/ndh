@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Improve `show_email`:
+    - set recipient by email string or `User` object
+    - allow multiple recipient
+    - allow optional link text
+    - allow optional mail subject
+
 ## [v6.5.3] - 2023-09-13
 
 - fix release

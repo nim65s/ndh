@@ -23,19 +23,17 @@ def show_emails(
     text: str = "",
     subject: str = "",
 ) -> str:
-    """Show an email as a link to connected users, and obfuscated for others."""
-    mails = [p.email if isinstance(p, User) else p for p in to]
+    """Show an email as a link to authenticated users, and obfuscated for others."""
+    mails = [r.email if hasattr(r, "email") else r for r in to]
+    subject = f"?subject={subject}" if subject else ""
     if authenticated:
-        subject = f"?subject={subject}" if subject else ""
         mails = ",".join(mails)
         content = f'<a href="mailto:{mails}{subject}">{text or mails}</a>'
     else:
-        subject = f"'?subject={subject}'" if subject else "''"
-        noscript = ",".join(mails).replace("@", AT).replace(".", DOT)
         content = EMAIL_JS.format(
             mails=[m.split("@") for m in mails],
-            noscript=noscript,
+            noscript=",".join(mails).replace("@", AT).replace(".", DOT),
             text=f"'{text}'" if text else "mails",
-            subject=subject,
+            subject=f"'{subject}'",
         )
     return mark_safe(f'<span class="mail">{content}</span>')
