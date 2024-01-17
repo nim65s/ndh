@@ -16,10 +16,11 @@ EMAIL_JS = """<script>
 
 def show_emails(authenticated: bool, *mails: [str], text: str = "") -> str:
     """Show an email as a link to connected users, and obfuscated for others."""
-    mail = mails[0]
     if authenticated:
+        mail = ",".join(mails)
         content = f'<a href="mailto:{mail}">{text or mail}</a>'
     else:
+        mail = mails[0]
         start, end = mail.split("@")
         at, dot = (f'<span class="{tag}"></span>' for tag in ("at", "dot"))
         noscript = mail.replace("@", at).replace(".", dot)

@@ -26,6 +26,7 @@ class TestMail(TestCase):
         self.assertNotIn(mail, show_emails(False, mail, mail, text=text))
         self.assertIn(text, show_emails(True, mail, mail, text=text))
         self.assertIn(text, show_emails(False, mail, mail, text=text))
+        self.assertIn(",".join([mail, mail]), show_emails(True, mail, mail, text=text))
 
 
 class TestNDHLinks(TestCase):
