@@ -16,7 +16,7 @@ jobs:
         id: meta
         with:
           images: nim65s/ndh
-      - uses: docker/login-action@v2
+      - uses: docker/login-action@v3
         with:
           username: nim65s
           password: ${{ secrets.DOCKERHUB_TOKEN }}
