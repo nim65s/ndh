@@ -27,8 +27,10 @@
     <li>{% show_email user text="hey" subject="hello" %}</li>
     <li>{% show_email user email subject="hello" %}</li>
     <li>{% show_email user email text="hey" subject="hello" %}</li>
+    <li>{% show_email users %}</li>
+    <li>{% show_email users text="hey" %}</li>
     <li>{% show_email users subject="hello" %}</li>
-    <li>{% show_email users subject="hello" %}</li>
+    <li>{% show_email users text="hey" subject="hello" %}</li>
     <li>{% show_phone phone %}</li>
 </ul>
 {% endblock %}

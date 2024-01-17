@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Improve `show_email`:
+    - allow single argument which is iterable
+
 ## [v6.6.0] - 2024-01-17
 
 - Improve `show_email`:

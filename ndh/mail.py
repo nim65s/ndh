@@ -1,5 +1,8 @@
 """Utils for email display."""
 
+
+from collections.abc import Iterable
+
 from django.contrib.auth import get_user_model
 from django.utils.safestring import mark_safe
 
@@ -17,6 +20,15 @@ EMAIL_JS = """<script>
 """
 
 
+def flatten(iterable):
+    """Flatten an iterable of "values or iterables"."""
+    return (
+        [c for b in iterable for c in flatten(b)]
+        if isinstance(iterable, Iterable) and not isinstance(iterable, str)
+        else [iterable]
+    )
+
+
 def show_emails(
     authenticated: bool,
     *to: [User | str],
@@ -24,7 +36,7 @@ def show_emails(
     subject: str = "",
 ) -> str:
     """Show an email as a link to authenticated users, and obfuscated for others."""
-    mails = [r.email if hasattr(r, "email") else r for r in to]
+    mails = [r.email if hasattr(r, "email") else r for r in flatten(to)]
     subject = f"?subject={subject}" if subject else ""
     if authenticated:
         mails = ",".join(mails)
