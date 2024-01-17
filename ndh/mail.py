@@ -14,8 +14,9 @@ EMAIL_JS = """<script>
 """
 
 
-def show_emails(authenticated: bool, mail: str, text: str = "") -> str:
+def show_emails(authenticated: bool, *mails: [str], text: str = "") -> str:
     """Show an email as a link to connected users, and obfuscated for others."""
+    mail = mails[0]
     if authenticated:
         content = f'<a href="mailto:{mail}">{text or mail}</a>'
     else:

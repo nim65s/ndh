@@ -20,6 +20,12 @@ class TestMail(TestCase):
         self.assertNotIn(mail, show_emails(False, mail, text=text))
         self.assertIn(text, show_emails(True, mail, text=text))
         self.assertIn(text, show_emails(False, mail, text=text))
+        self.assertIn(mail, show_emails(True, mail, mail))
+        self.assertNotIn(mail, show_emails(False, mail, mail))
+        self.assertIn(mail, show_emails(True, mail, mail, text=text))
+        self.assertNotIn(mail, show_emails(False, mail, mail, text=text))
+        self.assertIn(text, show_emails(True, mail, mail, text=text))
+        self.assertIn(text, show_emails(False, mail, mail, text=text))
 
 
 class TestNDHLinks(TestCase):
