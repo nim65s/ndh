@@ -8,6 +8,7 @@ CTX = {
     "email": "test@example.org",
     "phone": "(+33) 1 23 45 67 89",
     "user": get_user_model().objects.first,
+    "users": get_user_model().objects.all,
 }
 
 urlpatterns = [
