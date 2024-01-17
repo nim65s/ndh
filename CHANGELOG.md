@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v6.8.0] - 2024-01-17
+
 - Improve `show_email`:
     - allow css "klass"
 
@@ -358,7 +360,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v6.7.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v6.8.0...master
+[v6.8.0]: https://github.com/nim65s/ndh/compare/v6.7.0...v6.8.0
 [v6.7.0]: https://github.com/nim65s/ndh/compare/v6.6.0...v6.7.0
 [v6.6.0]: https://github.com/nim65s/ndh/compare/v6.5.3...v6.6.0
 [v6.5.3]: https://github.com/nim65s/ndh/compare/v6.5.2...v6.5.3

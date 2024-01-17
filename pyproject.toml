@@ -20,7 +20,7 @@ license = "BSD-2-Clause"
 name = "ndh"
 readme = "README.md"
 repository = "https://github.com/nim65s/ndh.git"
-version = "6.7.0"
+version = "6.8.0"
 
 [tool.poetry.dependencies]
 django-autoslug = "^1.9.9"
