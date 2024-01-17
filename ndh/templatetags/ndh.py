@@ -31,6 +31,7 @@ def show_email(
     *to: [User | str],
     text: str = "",
     subject: str = "",
+    klass: str = "",
 ) -> str:
     """Show an email as a link to connected users, and obfuscated for others."""
     return show_emails(
@@ -38,6 +39,7 @@ def show_email(
         *to,
         text=text,
         subject=subject,
+        klass=klass,
     )
 
 
