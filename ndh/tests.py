@@ -1,9 +1,23 @@
 """Test helpers for NDH."""
 
 from django.contrib.auth import get_user_model
+from django.test import TestCase
+
+from ndh.mail import show_emails
 
 
-class TestNDHLinks:
+class TestMail(TestCase):
+    """Test ndh/mail.py module."""
+
+    def test_show_emails(self):
+        """Test show_emails function."""
+        mail = "abc@def.com"
+
+        self.assertIn(mail, show_emails(True, mail))
+        self.assertNotIn(mail, show_emails(False, mail))
+
+
+class TestNDHLinks(TestCase):
     """Test the Links abstract model."""
 
     public_views = {}

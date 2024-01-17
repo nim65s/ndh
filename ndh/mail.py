@@ -1,0 +1,26 @@
+"""Utils for email display."""
+from django.utils.safestring import mark_safe
+
+EMAIL_JS = """<script>
+{{
+   const end = '{end}';
+   const start = '{start}';
+   const both = start + '@' + end;
+   const link = '<a href="mailto:' + both  + '">' + both + '</a>';
+   document.write(link);
+}}
+</script>
+<noscript>{noscript}</noscript>
+"""
+
+
+def show_emails(authenticated: bool, mail: str) -> str:
+    """Show an email as a link to connected users, and obfuscated for others."""
+    if authenticated:
+        content = f'<a href="mailto:{mail}">{mail}</a>'
+    else:
+        start, end = mail.split("@")
+        at, dot = (f'<span class="{tag}"></span>' for tag in ("at", "dot"))
+        noscript = mail.replace("@", at).replace(".", dot)
+        content = EMAIL_JS.format(start=start, end=end, noscript=noscript)
+    return mark_safe(f'<span class="mail">{content}</span>')
