@@ -1,5 +1,17 @@
 """NDH Widgets."""
-from django.forms.widgets import TextInput
+from django.forms.widgets import DateInput, TextInput
+
+DATE_FORMAT = "%Y-%m-%d"
+TYPE_DATE = {"type": "date"}
+TYPE_TIME = {"type": "time"}
+
+
+class AccessibleDateInput(DateInput):
+    """Set date HTML type."""
+
+    def __init__(self):
+        """Initialize with date type."""
+        super().__init__(attrs=TYPE_DATE, format=DATE_FORMAT)
 
 
 class DatalistInput(TextInput):

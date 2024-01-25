@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- add `widgets.AccessibleDateInput`
+
 ## [v6.8.0] - 2024-01-17
 
 - Improve `show_email`:
