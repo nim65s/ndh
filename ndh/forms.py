@@ -1,4 +1,5 @@
 """General Form-related helpers for NDH."""
+
 from django import forms
 
 from .widgets import DATE_FORMAT, TYPE_DATE, TYPE_TIME, DatalistInput

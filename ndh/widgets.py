@@ -1,4 +1,5 @@
 """NDH Widgets."""
+
 from django.forms.widgets import DateInput, TextInput
 
 DATE_FORMAT = "%Y-%m-%d"

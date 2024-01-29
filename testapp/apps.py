@@ -1,4 +1,5 @@
 """Configuration for Testapp."""
+
 from django.apps import AppConfig
 
 

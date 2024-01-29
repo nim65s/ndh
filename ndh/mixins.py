@@ -1,4 +1,5 @@
 """General view Mixins for NDH."""
+
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.views.generic.base import ContextMixin
 
