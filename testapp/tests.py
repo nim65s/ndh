@@ -1,4 +1,5 @@
 """Main entrypoint for test project & app."""
+
 import os
 from datetime import timedelta
 from decimal import Decimal

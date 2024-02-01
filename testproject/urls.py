@@ -1,4 +1,5 @@
 """Main URLS for the test project."""
+
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.urls import include, path

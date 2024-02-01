@@ -1,4 +1,5 @@
 """General QuerySets for NDH."""
+
 from django.db.models import QuerySet
 
 

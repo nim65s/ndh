@@ -1,6 +1,5 @@
 """Utils for email display."""
 
-
 from collections.abc import Iterable
 
 from django.contrib.auth import get_user_model
