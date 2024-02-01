@@ -43,7 +43,11 @@
 
               <ul class="navbar-nav">
                 {% if request.user.is_authenticated %}
-                  <li class="nav-item ms-auto"><a class="nav-link" href="{% url 'logout' %}">{% translate "Log out" %}</a></li>
+                  <li class="nav-item ms-auto">
+                      <form action="{% url 'logout' %}" method="post">{% csrf_token %}
+                          {% bootstrap_button _("Log out") button_type="submit" button_class="btn-dark" %}
+                      </form>
+                  </li>
                   {% if request.user.is_superuser %}
                     <li class="nav-item ms-auto"><a class="nav-link" href="{% url 'admin:index' %}">{% translate "Admin" %}</a></li>
                     {% if object_list %}

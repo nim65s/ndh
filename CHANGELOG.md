@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- templates: fix log out button
+
 ## [v6.9.0] - 2024-01-25
 
 - add `widgets.AccessibleDateInput`
