@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v6.9.1] - 2024-02-01
+
 - templates: fix log out button
 
 ## [v6.9.0] - 2024-01-25
@@ -367,7 +369,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0] - 2018-01-12
 
 
-[Unreleased]: https://github.com/nim65s/ndh/compare/v6.9.0...master
+[Unreleased]: https://github.com/nim65s/ndh/compare/v6.9.1...master
+[v6.9.1]: https://github.com/nim65s/ndh/compare/v6.9.0...v6.9.1
 [v6.9.0]: https://github.com/nim65s/ndh/compare/v6.8.0...v6.9.0
 [v6.8.0]: https://github.com/nim65s/ndh/compare/v6.7.0...v6.8.0
 [v6.7.0]: https://github.com/nim65s/ndh/compare/v6.6.0...v6.7.0

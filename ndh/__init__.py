@@ -1,4 +1,4 @@
 """Main module entrance."""
 
-__version__ = "6.9.0"
+__version__ = "6.9.1"
 __version_tuple__ = tuple(int(i) for i in __version__.split("."))
