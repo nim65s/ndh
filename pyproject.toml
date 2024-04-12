@@ -6,11 +6,6 @@ requires = ["poetry-core>=1.0.0"]
 omit = ["*/apps.py", "*/migrations/*", "*/wsgi.py"]
 source = ["ndh"]
 
-[tool.isort]
-known_django = "django"
-profile = "black"
-sections = "FUTURE,STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
-
 [tool.poetry]
 authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
 description = "Nim's Django Helpers"
@@ -32,10 +27,8 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = "^7.2.6"
-black = "^24.3.0"
 coverage = {extras = ["toml"], version = "^7.4.4"}
 ipython = "^8.23.0"
-isort = "^5.13.2"
 myst-parser = "^2.0.0"
 pre-commit = "^3.7.0"
 ruff = "^0.1.14"
@@ -45,11 +38,13 @@ safety = "^3.1.0"
 changelog = "https://github.com/nim65s/ndh/blob/master/CHANGELOG.md"
 
 [tool.ruff]
-allowed-confusables = [" "]
 extend-exclude = ["migrations"]
-extend-ignore = ["D203", "D213", "RUF012"]
-extend-select = ["A", "B", "C", "COM", "D", "DJ", "EM", "EXE", "G", "N", "PTH", "RET", "RUF", "UP", "W", "YTT"]
 target-version = "py310"
+
+[tool.ruff.lint]
+allowed-confusables = [" "]
+extend-ignore = ["COM812", "D203", "D213", "RUF012"]
+extend-select = ["A", "B", "C", "COM", "D", "DJ", "EM", "EXE", "G", "N", "PTH", "RET", "RUF", "UP", "W", "YTT"]
 
 [tool.tomlsort]
 all = true

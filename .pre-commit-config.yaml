@@ -1,8 +1,4 @@
 repos:
-- repo: https://github.com/PyCQA/isort
-  rev: 5.13.2
-  hooks:
-  - id: isort
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.3.7
   hooks:
@@ -10,6 +6,7 @@ repos:
     args:
     - --fix
     - --exit-non-zero-on-fix
+  - id: ruff-format
 - repo: https://github.com/nim65s/pre-commit-sort
   rev: v0.1.0
   hooks:
@@ -37,8 +34,4 @@ repos:
   - id: fix-byte-order-marker
   - id: mixed-line-ending
   - id: trailing-whitespace
-- repo: https://github.com/psf/black
-  rev: 24.3.0
-  hooks:
-  - id: black
 exclude: .*/migrations/.*
