@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- dependency / tooling upgrades
+
 ## [v6.9.1] - 2024-02-01
 
 - templates: fix log out button
