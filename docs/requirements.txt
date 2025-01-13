@@ -496,9 +496,9 @@ tzdata==2023.3 ; python_version >= "3.10" and python_version < "4.0" and sys_pla
 urllib3==2.0.4 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:8d22f86aae8ef5e410d4f539fde9ce6b2113a001bb4d189e0aed70642d602b11 \
     --hash=sha256:de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4
-virtualenv==20.24.4 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:29c70bb9b88510f6414ac3e55c8b413a1f96239b6b789ca123437d5e892190cb \
-    --hash=sha256:772b05bfda7ed3b8ecd16021ca9716273ad9f4467c801f27e83ac73430246dca
+virtualenv==20.26.6 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:280aede09a2a5c317e409a00102e7077c6432c5a38f0ef938e643805a7ad2c48 \
+    --hash=sha256:7345cc5b25405607a624d8418154577459c3e0277f5466dd79c49d5e492995f2
 wcwidth==0.2.6 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:795b138f6875577cd91bba52baf9e445cd5118fd32723b460e30a0af30ea230e \
     --hash=sha256:a5220780a404dbe3353789870978e472cfe477761f06ee55077256e509b156d0
