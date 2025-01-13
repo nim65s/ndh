@@ -228,9 +228,9 @@ isort==5.12.0 ; python_version >= "3.10" and python_version < "4.0" \
 jedi==0.19.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:bcf9894f1753969cbac8022a8c2eaee06bfa3724e4192470aaffe7eb6272b0c4 \
     --hash=sha256:cb8ce23fbccff0025e9386b5cf85e892f94c9b822378f8da49970471335ac64e
-jinja2==3.1.2 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852 \
-    --hash=sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61
+jinja2==3.1.5 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:8fefff8dc3034e27bb80d67c671eb8a9bc424c0ef4c0826edbff304cceff43bb \
+    --hash=sha256:aba0f4dc9ed8013c424088f68a5c226f7d6097ed89b246d7749c2ec4175c6adb
 markdown-it-py==3.0.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1 \
     --hash=sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb
