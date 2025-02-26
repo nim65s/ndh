@@ -1,41 +1,41 @@
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0"]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[dependency-groups]
+dev = [
+  "coverage[toml]>=7.6.12",
+  "ipython>=8.32.0",
+  "myst-parser>=4.0.1",
+  "pre-commit>=4.1.0",
+  "ruff>=0.9.7",
+  "sphinx>=8.1.3"
+]
+
+[project]
+authors = [
+  {email = "guilhem.saurel@laas.fr", name = "Guilhem Saurel"}
+]
+dependencies = [
+  "django-autoslug>=1.9.9",
+  "django-bootstrap5>=24.3"
+]
+description = "Nim's Django Helpers"
+license = "BSD-2-Clause"
+name = "ndh"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "6.9.2"
+
+[project.urls]
+Changelog = "https://github.com/nim65s/ndh/blob/master/CHANGELOG.md"
+Documentation = "https://ndh.readthedocs.io/"
+Homepage = "https://github.com/nim65s/ndh"
+Repository = "https://github.com/nim65s/ndh.git"
 
 [tool.coverage.run]
 omit = ["*/apps.py", "*/migrations/*", "*/wsgi.py"]
 source = ["ndh"]
-
-[tool.poetry]
-authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
-description = "Nim's Django Helpers"
-documentation = "https://ndh.readthedocs.io/"
-homepage = "https://github.com/nim65s/ndh"
-license = "BSD-2-Clause"
-name = "ndh"
-readme = "README.md"
-repository = "https://github.com/nim65s/ndh.git"
-version = "6.9.2"
-
-[tool.poetry.dependencies]
-django-autoslug = "^1.9.9"
-django-bootstrap5 = "^24.3"
-python = "^3.10"
-
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-Sphinx = "^8.0.2"
-coverage = {extras = ["toml"], version = "^7.6.1"}
-ipython = "^8.27.0"
-myst-parser = "^4.0.0"
-pre-commit = "^3.8.0"
-ruff = "^0.1.14"
-safety = "^3.2.8"
-
-[tool.poetry.urls]
-changelog = "https://github.com/nim65s/ndh/blob/master/CHANGELOG.md"
 
 [tool.ruff]
 extend-exclude = ["migrations"]

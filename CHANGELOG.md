@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- poetry -> uv
+- drop safety
+
 ## [v6.9.2] - 2024-12-17
 
 - dependency / tooling upgrades
