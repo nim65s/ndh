@@ -523,7 +523,7 @@ wheels = [
 
 [[package]]
 name = "ndh"
-version = "6.9.2"
+version = "6.10.0"
 source = { editable = "." }
 dependencies = [
     { name = "django-autoslug" },
