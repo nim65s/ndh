@@ -25,7 +25,7 @@ license = "BSD-2-Clause"
 name = "ndh"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "6.10.0"
+version = "6.10.1"
 
 [project.urls]
 Changelog = "https://github.com/nim65s/ndh/blob/master/CHANGELOG.md"
