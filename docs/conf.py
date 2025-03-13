@@ -14,10 +14,10 @@
 import os
 import sys
 from pathlib import Path
+import tomllib
 
 import django
 
-import toml
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 sys.path.insert(0, str(Path("..").resolve()))
@@ -30,7 +30,7 @@ copyright = "2017-2021, Guilhem Saurel"  # noqa: A001
 author = "Guilhem Saurel"
 
 with (Path(__file__).parent.parent / "pyproject.toml").open() as f:
-    release = toml.load(f)["project"]["version"]
+    release = tomllib.load(f)["project"]["version"]
 
 # -- General configuration ---------------------------------------------------
 
