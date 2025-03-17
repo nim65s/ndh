@@ -29,7 +29,7 @@ project = "ndh"
 copyright = "2017-2021, Guilhem Saurel"  # noqa: A001
 author = "Guilhem Saurel"
 
-with (Path(__file__).parent.parent / "pyproject.toml").open('rb') as f:
+with (Path(__file__).parent.parent / "pyproject.toml").open("rb") as f:
     release = tomllib.load(f)["project"]["version"]
 
 # -- General configuration ---------------------------------------------------
