@@ -142,9 +142,9 @@ django==5.2.8 \
 django-autoslug==1.9.9 \
     --hash=sha256:79f88e9433c1c88d8d3f2bec60d65ca98bffaff6c072b78aa5fd99d0e84a13dd \
     --hash=sha256:81cb018944498f27f439d439687cf902212cafbdb8c74c8ca0307543a3d82907
-django-bootstrap5==25.1 \
-    --hash=sha256:964ad2d970d0495b030b86f31b33033dfdfe839a67b32ea599fa02eb39988ae7 \
-    --hash=sha256:e81c77eb710356f94e426a51f4f469890d5720f5e7e53d650f4405d4cc94da04
+django-bootstrap5==25.2 \
+    --hash=sha256:9418969fa5932729dc1addb1b70f13c9312a522b15033219ac3cbc5728eb8937 \
+    --hash=sha256:abcfcd543efc19aaab4456a12b566507f684cfda98effc5dd3ad5167ba05c7b3
 docutils==0.22.3 \
     --hash=sha256:21486ae730e4ca9f622677b1412b879af1791efcfba517e4c6f60be543fc8cdd \
     --hash=sha256:bd772e4aca73aff037958d44f2be5229ded4c09927fcf8690c577b66234d6ceb
