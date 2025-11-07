@@ -21,11 +21,12 @@ class Links:
     slug: str
     _meta: Any
     absolute_url_detail: bool = True
-    create_view_name_suffix = "-add"
-    delete_view_name_suffix = "-delete"
-    detail_view_name_suffix = ""
-    list_view_name_suffix = "s"
-    update_view_name_suffix = "-update"
+    create_view_name_suffix: str = "-add"
+    delete_view_name_suffix: str = "-delete"
+    detail_view_name_suffix: str = ""
+    list_view_name_suffix: str = "s"
+    update_view_name_suffix: str = "-update"
+    force_full_url: bool = False
 
     def get_pk_or_slug(self):
         """Provide the right kwargs for reverse()."""
@@ -83,11 +84,11 @@ class Links:
 
     def get_full_admin_url(self) -> str:
         """Get the protocol + domain + admin_url."""
-        return full_url(self.get_admin_url())
+        return full_url(self.get_admin_url(), force=self.force_full_url)
 
     def get_full_url(self) -> str:
         """Get the protocol + domain + absolute_url."""
-        return full_url(self.get_absolute_url())
+        return full_url(self.get_absolute_url(), force=self.force_full_url)
 
     def get_link(self) -> str:
         """Get the HTML link for this absolute_url."""

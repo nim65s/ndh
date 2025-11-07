@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- if `://` is in url, assume it is already a full url. This can be bypassed with a force flag.
+
 ## [v6.10.1] - 2025-03-13
 
 ## [v6.10.0] - 2025-03-13
