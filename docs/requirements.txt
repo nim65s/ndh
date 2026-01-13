@@ -267,9 +267,9 @@ imagesize==1.4.1 \
 ipython==8.34.0 ; python_full_version < '3.11' \
     --hash=sha256:0419883fa46e0baa182c5d50ebb8d6b49df1889fdb70750ad6d8cfe678eda6e3 \
     --hash=sha256:c31d658e754673ecc6514583e7dda8069e47136eb62458816b7d1e6625948b5a
-ipython==8.37.0 ; python_full_version >= '3.11' \
-    --hash=sha256:ca815841e1a41a1e6b73a0b08f3038af9b2252564d01fc405356d34033012216 \
-    --hash=sha256:ed87326596b878932dbcb171e3e698845434d8c61b8d8cd474bf663041a9dcf2
+ipython==8.38.0 ; python_full_version >= '3.11' \
+    --hash=sha256:750162629d800ac65bb3b543a14e7a74b0e88063eac9b92124d4b2aa3f6d8e86 \
+    --hash=sha256:9cfea8c903ce0867cc2f23199ed8545eb741f3a69420bfcf3743ad1cec856d39
 ipython-pygments-lexers==1.1.1 ; python_full_version >= '3.11' \
     --hash=sha256:09c0138009e56b6854f9535736f4171d855c8c08a563a0dcd8022f78355c7e81 \
     --hash=sha256:a9462224a505ade19a605f71f8fa63c2048833ce50abc86768a0d81d876dc81c
