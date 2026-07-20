@@ -375,9 +375,9 @@ parso==0.8.7 \
 pexpect==4.9.0 ; sys_platform != 'emscripten' and sys_platform != 'win32' \
     --hash=sha256:7236d1e080e4936be2dc3e326cec0af72acf9212a7e1d060210e70a47e253523 \
     --hash=sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f
-platformdirs==4.10.0 \
-    --hash=sha256:31e761a6a0ca04faf7353ea759bdba55652be214725111e5aac52dfa29d4bef7 \
-    --hash=sha256:fb516cdb12eb0d857d0cd85a7c57cea4d060bee4578d6cf5a14dfdf8cbf8784a
+platformdirs==4.10.1 \
+    --hash=sha256:0e4eff26be2d75293977f7cddc153fd9b8eaa7fb0c7b64ffe4076cb443117443 \
+    --hash=sha256:ceab4084426fe6319ce18e86deada8ab1b7487c7aee7040c55e277c9ae793695
 pre-commit==4.6.0 \
     --hash=sha256:718d2208cef53fdc38206e40524a6d4d9576d103eb16f0fec11c875e7716e9d9 \
     --hash=sha256:e2cf246f7299edcabcf15f9b0571fdce06058527f0a06535068a86d38089f29b
