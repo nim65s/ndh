@@ -2,12 +2,11 @@
 
 from typing import Any
 
+from autoslug import AutoSlugField  # type: ignore
 from django.db import models
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
-
-from autoslug import AutoSlugField  # type: ignore
 
 from .querysets import NameOrderedQuerySet
 from .utils import full_url
