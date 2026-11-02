@@ -14,7 +14,7 @@ dev = [
 
 [project]
 authors = [
-  {email = "guilhem.saurel@laas.fr", name = "Guilhem Saurel"}
+  { email = "guilhem.saurel@laas.fr", name = "Guilhem Saurel" }
 ]
 dependencies = [
   "django-autoslug>=1.9.9",
