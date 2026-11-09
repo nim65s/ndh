@@ -14,10 +14,9 @@
 import os
 import sys
 from pathlib import Path
-import tomllib
 
 import django
-
+import tomllib
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 sys.path.insert(0, str(Path("..").resolve()))
