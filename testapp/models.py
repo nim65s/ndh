@@ -22,5 +22,3 @@ class TestModelList(TestModel):
 
 class TestModelPK(Links, TimeStampedModel):
     """Test model for get_absolute_url for objects."""
-
-    pass
