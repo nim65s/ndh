@@ -774,9 +774,9 @@ tzdata==2026.6 ; sys_platform == 'win32' \
 urllib3==2.8.0 \
     --hash=sha256:0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3 \
     --hash=sha256:63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63
-virtualenv==21.15.6 \
-    --hash=sha256:4b99ab9b95ff11043939bb4cad2fa0449175fa5a478372864f62160cb6c1a7ed \
-    --hash=sha256:c8b65c7d206ca6ef18de9352c160b3f04f66fff9f6b0ec8fd31f14688eba52c4
+virtualenv==21.15.9 \
+    --hash=sha256:adc6799981f513ce852aea17ea592e0d342ce48e87f5d17a3d997966df582a67 \
+    --hash=sha256:c0fbae7de061402e31897d96cfbe7dc35ce93cd464fe05f9bdbecf61313447bf
 wcwidth==0.9.4 \
     --hash=sha256:093469e01d881bff3db93ff3f56c364dc87c441ea01f9f41c22de0c0bdf5c6ef \
     --hash=sha256:12786620375dc83fabf4b2b2aa52416fef2bc6094522ea29c8a53c75b0dfe9b6 \
